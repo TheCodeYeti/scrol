@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Scrol</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
 
-<%= yield %>
+    <title>Scrol</title>
 
-</body>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+  </head>
+  <body>
+
+    <nav>
+
+      <% if current_user %>
+
+        <!-- @spencer should current_user.id be current_user? -->
+        <%= link_to 'Edit Profile', edit_user_path(current_user.id) %>
+        <%= link_to 'logout', :logout, method: :post %>
+
+      <% else %>
+
+        <%= link_to 'Register', new_user_path %>
+        <%= link_to 'login', :login %>
+
+      <% end %>
+
+    </nav>
+
+    <div class="notifications">
+
+      <p id='notice'><%= flash[:notice] %></p>
+      <p id='alert'><%= flash[:alert] %></p>
+
+    </div>
+
+    <%= yield %>
+
+  </body>
 </html>
