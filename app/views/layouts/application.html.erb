@@ -7,7 +7,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <%= javascript_include_tag 'application','modernizr.js-track' => true %> 
+    <%= javascript_include_tag 'application','modernizr.js-track' => true %>
+    <!-- font-awesome provides social media symbols -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
   </head>
   <body>
 
@@ -35,7 +38,15 @@
 
     </div>
 
-    <%= yield %>
+      <ul class= "sidenav">
+        <li title="gmail"><a class="google-plus" href="#">Gmail</a></li>
+        <li title="youtube"><a class="youtube" href="#">Youtube</a></li>
+        <li title="twitter"><a class="twitter" href="#">Twitter</a></li>
+        <li title="facebook"><a class="facebook" href="#">Facebook</a></li>
+        <li title="instagram"><a class="instagram" href="#">Instagram</a></li>
+      </ul>
+
+      <%= yield %>
 
   </body>
 </html>
