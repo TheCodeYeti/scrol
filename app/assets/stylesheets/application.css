@@ -13,3 +13,63 @@
  *= require_tree .
  *= require_self
  */
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
+ .sidenav {
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: #fff4f5;
+   /*z-index: 100;*/
+   width: 60px;
+   position: fixed;
+   /*overflow: hidden;*/
+   /*display: block;*/
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+ }
+
+ .sidenav li a{
+   display: block;
+   height: 5em;
+   width: 5em;
+   text-indent: -500em;
+   line-height: 5em;
+   text-align: center;
+   color: #ff5c62;
+   background-color:  #fff4f5;
+   position: relative;
+   border-bottom: 1px solid #ffe2e3;
+   transition: background 0.3s ease-in-out;
+ }
+
+ .sidenav li a:before{
+  font-family: FontAwesome;
+  text-indent: 0em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+ }
+
+ .sidenav li a.google-plus:before{
+   content: "\f0d5";
+ }
+
+ .sidenav li a.youtube:before{
+   content: "\f167";
+ }
+
+ .sidenav li a.twitter:before{
+   content: "\f099";
+ }
+
+ .sidenav li a.facebook:before{
+   content: "\f09a";
+ }
+
+ .sidenav li a.instagram:before{
+   content: "\f16d";
+ }
