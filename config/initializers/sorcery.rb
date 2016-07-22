@@ -123,7 +123,7 @@ Rails.application.config.sorcery.configure do |config|
   # config.facebook.display = "page"
   # config.facebook.api_version = "v2.2"
   #
-  # config.github.key = ENV['github_client_id']
+  # config.github.key = ENV['github_client_idgit ']
   # config.github.secret = ""
   # config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
   # config.github.user_info_mapping = {:email => "name"}
