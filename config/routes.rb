@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'twitter/index'
+
   get 'user_sessions/new'
 
   get 'user_sessions/create'
