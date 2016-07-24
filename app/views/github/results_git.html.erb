@@ -1,0 +1,36 @@
+<h1>Test</h1>
+
+<ul>
+  <% @results.each { |result| %>
+  <li>
+    <p>
+      <%= result.id %>
+    </p>
+
+    <p>
+      <%= result.subject.type %>
+    </p>
+
+    <p>
+      <%= result.subject.title %>
+    </p>
+
+    <p>
+      <%= result.repository.name %>
+    </p>
+
+    <p>
+      <%= result.repository.owner.login %>
+    </p>
+
+    <p>
+      <%= result.updated_at %>
+    </p>
+
+    <p>
+      <%= result.repository.html_url %>
+    </p>
+  </li>
+
+  <% } %>
+</ul>

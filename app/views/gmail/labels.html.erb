@@ -1,0 +1,63 @@
+<h1>Threads</h1>
+
+<% @messages.each { |message| %>
+<ul>
+  <li>
+    <p>
+     'message.id'  <%= message.id %>
+    </p>
+    <p>
+    'message.snippet'  <%= message.snippet %>
+    </p>
+    <p>
+    'message.historyId'  <%= message.historyId %>
+    </p>
+  </li>
+</ul>
+<% } %>
+
+<h1>A Messge</h1>
+
+<% @full_messages.each { |full_message| %>
+<ul>
+  <li>
+    <p>
+     'message.id'  <%= full_message.data.id %>
+    </p>
+  <p>
+    'labels' <%= full_message.data.labelIds.join.to_s  %>
+  </p>
+
+    <p>
+    'brief'  <%= full_message.data.snippet %>
+    </p>
+    <p>
+    'subject'  <%= full_message.data.payload.headers[12].value %>
+    </p>
+    <p>
+    'message'  <%= full_message.data.payload.parts[0].body.data.to_s.force_encoding("ISO-8859-1").encode("UTF-8") %>
+    </p>
+
+    <p>
+      'date'  <%= full_message.data.payload.headers[9].value %>
+    </p>
+
+    <p>
+        'from'  <%= full_message.data.payload.headers[10].value %>
+    </p>
+
+    <p>
+        'to'  <%= full_message.data.payload.headers[11].value %>
+    </p>
+
+    <p>
+        'Recieved name value'  <%= full_message.data.payload.headers[1].value %>
+    </p>
+
+    <p>
+        ' ---- no URLS ---- that O can find ''
+    </p>
+
+  </li>
+</ul>
+<% } %>

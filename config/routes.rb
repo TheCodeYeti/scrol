@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  get 'mail/index'
+
+  # added by paul start
+    get 'gmail/redirect'
+    get 'gmail/callback'
+    get 'gmail/labels'
+    get 'authorize' => 'auth#gettoken'
+  # added by paul end
+
   get 'user_sessions/new'
 
   get 'user_sessions/create'
@@ -10,6 +20,11 @@ Rails.application.routes.draw do
 
   get 'login' => 'user_sessions#new', as: :login
   post 'logout' => 'user_sessions#destroy', as: :logout
+
+  get 'github/redirect_git'
+  get 'github/callback_git'
+  get 'github/results_git'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
