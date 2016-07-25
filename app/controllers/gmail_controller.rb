@@ -80,6 +80,13 @@ class GmailController < ApplicationController
         parameters: {userId: 'me', id: results.data.threads[0].id}
       )
 
+      # emailBytes = Base64.decode64(@full_messages[0].data.payload.parts[0].body.data);
+      #
+      # @email = emailBytes.unpack('C*').pack('U*')
+
+      @url = "https://mail.google.com/mail/u/0/#" + @full_messages[0].data.labelIds[0].downcase + "/" + @full_messages[0].data.id
+
+
 # binding.pry
 
 

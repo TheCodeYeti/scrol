@@ -29,14 +29,18 @@
   </p>
 
     <p>
+      <a href='<%= @url  %>' >Link to Message</a>
+    </p>
+    <p>
     'brief'  <%= full_message.data.snippet %>
     </p>
     <p>
     'subject'  <%= full_message.data.payload.headers[12].value %>
     </p>
+    
     <p>
     'message'  <%= full_message.data.payload.parts[0].body.data.to_s.force_encoding("ISO-8859-1").encode("UTF-8") %>
-    </p>
+  </p>
 
     <p>
       'date'  <%= full_message.data.payload.headers[9].value %>
@@ -50,6 +54,8 @@
         'to'  <%= full_message.data.payload.headers[11].value %>
     </p>
 
+
+
     <p>
         'Recieved name value'  <%= full_message.data.payload.headers[1].value %>
     </p>
@@ -57,6 +63,7 @@
     <p>
         ' ---- no URLS ---- that O can find ''
     </p>
+
 
   </li>
 </ul>
