@@ -1,20 +1,21 @@
 module AuthHelper
 
-  # App's client ID. Register the app in Application Registration Portal to get this value.
-  CLIENT_ID = Figaro.env.OUTLOOK_APPLICATION_ID
-  # App's client secret. Register the app in Application Registration Portal to get this value.
-  CLIENT_SECRET = Figaro.env.OUTLOOK_PASSWORD
+  # # App's client ID. Register the app in Application Registration Portal to get this value.
+  # CLIENT_ID = Figaro.env.OUTLOOK_APPLICATION_ID
+  # # App's client secret. Register the app in Application Registration Portal to get this value.
+  # CLIENT_SECRET = Figaro.env.OUTLOOK_PASSWORD
 
   REDIRECT_URI = 'http://localhost:3000/authorize' # Temporary!
 
   # Scopes required by the app
   SCOPES = [ 'openid',
+              'profile',
              'https://outlook.office.com/mail.read' ]
 
   # Generates the login URL for the app.
   def get_login_url
-    client = OAuth2::Client.new(CLIENT_ID,
-                                CLIENT_SECRET,
+    client = OAuth2::Client.new(Figaro.env.OUTLOOK_APPLICATION_ID,
+                                Figaro.env.OUTLOOK_PASSWORD,
                                 :site => 'https://login.microsoftonline.com',
                                 :authorize_url => '/common/oauth2/v2.0/authorize',
                                 :token_url => '/common/oauth2/v2.0/token')
@@ -25,8 +26,8 @@ module AuthHelper
 
   # Exchanges an authorization code for a token
   def get_token_from_code(auth_code)
-    client = OAuth2::Client.new(CLIENT_ID,
-                                CLIENT_SECRET,
+    client = OAuth2::Client.new(Figaro.env.OUTLOOK_APPLICATION_ID,
+                                Figaro.env.OUTLOOK_PASSWORD,
                                 :site => 'https://login.microsoftonline.com',
                                 :authorize_url => '/common/oauth2/v2.0/authorize',
                                 :token_url => '/common/oauth2/v2.0/token')
@@ -34,6 +35,7 @@ module AuthHelper
     token = client.auth_code.get_token(auth_code,
                                        :redirect_uri => authorize_url,
                                        :scope => SCOPES.join(' '))
+
   end
 
   # Parses an ID token and returns the user's email
@@ -41,6 +43,7 @@ module AuthHelper
 
     # JWT is in three parts, separated by a '.'
     token_parts = id_token.split('.')
+
     # Token content is in the second part
     encoded_token = token_parts[1]
 
@@ -61,6 +64,7 @@ module AuthHelper
 
     # Email is in the 'preferred_username' field
     email = jwt['preferred_username']
+
   end
 
 end

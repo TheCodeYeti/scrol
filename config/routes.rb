@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     get 'gmail/callback'
     get 'gmail/labels'
     get 'authorize' => 'auth#gettoken'
+    # root 'application#home'
+
+    root to: 'users#index'
   # added by paul end
 
   get 'user_sessions/new'
@@ -14,7 +17,7 @@ Rails.application.routes.draw do
   get 'user_sessions/create'
 
   get 'user_sessions/destroy'
-  root to: 'users#index'
+
   resources :user_sessions
   resources :users
 
