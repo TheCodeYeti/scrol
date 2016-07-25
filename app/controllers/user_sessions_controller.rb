@@ -3,7 +3,7 @@ class UserSessionsController < ApplicationController
   # @spencer not sure if we should have this line of code
   # we may want the ability to destroy sessions that are broken
   # and i'm not sure if this prevents that - comment out if issues
-  skip_before_action :require_login, :except: [:destroy]
+  skip_before_action :require_login, except: [:destroy]
 
 
   def new
