@@ -39,7 +39,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Simple Password Authentication and OAuth
 gem 'sorcery'
+
+# store all keys in application.yml and use a nifty ENV variable to access
 gem "figaro"
+
+# 3 legged Oauth
+# gem 'oauth2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
