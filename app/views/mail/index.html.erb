@@ -11,5 +11,10 @@
       <td><%= message['Subject'] %></td>
       <td><%= message['ReceivedDateTime'] %></td>
     </tr>
+
+    <p>
+      replyto<%= message['ReplyTo']  %> <br/>
+      <a href="<%= message['WebLink']  %>">weblink</a>
+    </p>
   <% end %>
 </table>
