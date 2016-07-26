@@ -42,9 +42,9 @@ body{
    line-height: 5em;
    text-align: center;
    color: #22B58B;
-   background-color: #7a7d7d;
+   background-color: #2f4858;
    position: relative;
-   border-bottom: 1px solid #717474;
+   border-bottom: 1px solid #243a47;
    transition: background 0.1s ease-in-out;
  }
 
@@ -60,7 +60,7 @@ body{
  }
 
  .sidenav li a:hover{
-   color: #79b473;
+   color: #59d6cd;
  }
 
  .sidenav li a.user-icon:before{

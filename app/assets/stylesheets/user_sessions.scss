@@ -1,18 +1,35 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .login-form {
-  background: rgba(19, 35, 47, 0.9);
+  background: #2f4858;
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
+  border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  list-style: none;
+  box-sizing: border-box;
+  display: block;
+}
+
+.greeting{
+  text-align: center;
+  color: #ffffff;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 label{
   position: absolute;
-  /*transform: translateY(6px);*/
-  left: 13;
-  color: rgba(255,255,255, 0.5);
+  transform: translateY(13px);
+  left: 15px;
+  color: rgba(255, 255, 255, 0.63);
   transition: all 0.25s ease-in-out;
   font-size: 22px;
+  pointer-events: none;
 }
 
 .req{
@@ -23,18 +40,29 @@ label.highlight{
   color: #ffffff;
 }
 
-input {
-  font-size: 18px;
+label.active{
+  transform: translateY(-9px);
+  left: 15px;
+  font-size: 16px;
+  background-color: #2f4858;
+  padding: 0 7px;
+  letter-spacing: 0.2em;
+}
+
+input, textarea {
+  font-size: 20px;
   display: block;
   width: 100%;
   height: 100%;
-  padding: 5px 10px;
+  padding: 10px;
+  margin: 40px 0;
   border: 1px solid #94a6ab;
   color: #ffffff;
+  background: none;
   transition: border-color .25s ease;
 }
 
-input:focus {
+input:not([type='submit']):focus {
   outline: 0;
   border-color: #92b5bf;
 }
@@ -44,16 +72,20 @@ input:focus {
   margin-bottom: 40px;
 }
 
-.actions{
+input[type='submit']{
   border: 0;
   outline: none;
-  padding: 15px 0;
+  padding: 20px 0;
   text-transform: uppercase;
-  background-color: #33867e;
+  font-size: 1.6em;
+  letter-spacing: .1em;
+  background: #33867e;
   color: #ffffff;
   transition: all 0.5s ease;
+  border: none;
+  margin-top: 35px;
 }
 
-.actions:hover, .actions:focus{
-  background-color: #2b6f68;
+input[type='submit']:hover{
+  background: #266c66;
 }

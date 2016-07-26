@@ -44,6 +44,7 @@ GEM
     buftok (0.2.0)
     builder (3.2.2)
     byebug (9.0.5)
+    coderay (1.1.1)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     domain_name (0.5.20160615)
@@ -80,12 +81,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-<<<<<<< 3896fd39bbb676f348e331ceb0b37775ec3708ee
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
-=======
     method_source (0.8.2)
->>>>>>> created branch ui
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -106,7 +104,7 @@ GEM
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
     pkg-config (1.1.7)
-    pry (0.10.3)
+    pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
@@ -150,11 +148,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-<<<<<<< 3896fd39bbb676f348e331ceb0b37775ec3708ee
     simple_oauth (0.3.1)
-=======
     slop (3.6.0)
->>>>>>> created branch ui
     sorcery (0.9.1)
       bcrypt (~> 3.1)
       oauth (~> 0.4, >= 0.4.4)
@@ -200,10 +195,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-<<<<<<< 3896fd39bbb676f348e331ceb0b37775ec3708ee
-=======
-  coffee-rails (~> 4.1.0)
->>>>>>> created branch ui
   figaro
   jbuilder (~> 2.0)
   jquery-rails
