@@ -128,10 +128,10 @@ Rails.application.config.sorcery.configure do |config|
   # config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
   # config.github.user_info_mapping = {:email => "name"}
   #
-  # config.google.key = ""
-  # config.google.secret = ""
-  # config.google.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=google"
-  # config.google.user_info_mapping = {:email => "email", :username => "name"}
+  config.google.key = ENV['GOOGLE_API_CLIENT_ID']
+  config.google.secret = ENV['GOOGLE_API_CLIENT_SECRET']
+  config.google.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=google"
+  config.google.user_info_mapping = {:email => "email", :username => "name"}
   #
   # config.vk.key = ""
   # config.vk.secret = ""

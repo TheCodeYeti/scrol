@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class OauthConnectionsControllerTest < ActionController::TestCase
+class OauthsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
