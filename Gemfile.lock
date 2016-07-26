@@ -1,3 +1,11 @@
+PATH
+  remote: ../sorcery
+  specs:
+    sorcery (0.9.1)
+      bcrypt (~> 3.1)
+      oauth (~> 0.4, >= 0.4.4)
+      oauth2 (>= 0.8.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -143,10 +151,6 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     simple_oauth (0.3.1)
-    sorcery (0.9.1)
-      bcrypt (~> 3.1)
-      oauth (~> 0.4, >= 0.4.4)
-      oauth2 (>= 0.8.0)
     spring (1.7.2)
     sprockets (3.6.3)
       concurrent-ruby (~> 1.0)
@@ -194,7 +198,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  sorcery
+  sorcery!
   spring
   sqlite3
   twitter
