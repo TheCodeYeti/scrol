@@ -7,7 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <%= javascript_include_tag 'application','modernizr.js-track' => true %>
+    
     <!-- font-awesome provides social media symbols -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
 
@@ -37,16 +37,29 @@
       <p id='alert'><%= flash[:alert] %></p>
 
     </div>
-
+    <div class= "nav-wrapper">
       <ul class= "sidenav">
-        <li title="gmail"><a class="google-plus" href="#">Gmail</a></li>
-        <li title="youtube"><a class="youtube" href="#">Youtube</a></li>
-        <li title="twitter"><a class="twitter" href="#">Twitter</a></li>
-        <li title="facebook"><a class="facebook" href="#">Facebook</a></li>
-        <li title="instagram"><a class="instagram" href="#">Instagram</a></li>
+        <li title="user-icon"><a class="user-icon" href="#">User</a></li>
+        <li title="gmail-icon"><a class="google-plus" href="#">Gmail</a></li>
+        <li title="youtube-icon"><a class="youtube" href="#">Youtube</a></li>
+        <li title="twitter-icon"><a class="twitter" href="#">Twitter</a></li>
+        <li title="facebook-icon"><a class="facebook" href="#">Facebook</a></li>
+        <li title="instagram-icon"><a class="instagram" href="#">Instagram</a></li>
       </ul>
 
-      <%= yield %>
+      <ul class= "sidenav-bar">
+        <li><a href="#">User</a></li>
+        <li><a href="#">Gmail</a></li>
+        <li><a href="#">Youtube</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">instagram</a></li>
+      </ul>
+    </div>
+    <main>
+        <%= yield %>
+    </main>
 
   </body>
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 </html>
