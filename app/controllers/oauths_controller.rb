@@ -13,10 +13,10 @@ class OauthsController < ApplicationController
 
     if auth
 
-      auth.access_token = @access_token.token
+      auth.oauth_token = @access_token.token
       # auth.access_token_secret = @access_token.secret
       auth.save
-      flash[:notice] = "Your #{params[:provider]} account was successfully cconnected"
+      flash[:notice] = "Your #{params[:provider]} account was successfully connected"
 
     end
 
