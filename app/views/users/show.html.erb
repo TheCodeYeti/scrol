@@ -15,5 +15,23 @@
   <%= @user.salt %>
 </p>
 
+
+<h2>Connections</h2>
+
+<div class="connection">
+  <%= @user.authentications.each do |authentication| %>
+
+    <%= authentication.provider %>
+    <%= authentication.username %>
+    <%= authentication.oauth_token %>
+
+  <% end %>
+</div>
+
+<div class="connection">
+  Google: <%= link_to 'Connect', auth_at_provider_url('google') %>
+</div>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

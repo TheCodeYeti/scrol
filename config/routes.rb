@@ -1,26 +1,18 @@
 Rails.application.routes.draw do
 
-  get 'mail/index'
+  root to: 'users#index' #to update to messages#index
 
+  # get 'mail/index'
 
   # added by paul start
-  get 'oauth/redirect'
-
-  get 'authorize' => 'oauth#gettoken'
-  get 'oauth/callback'
-  get 'oauth/callback_outlook'
-  get 'results/:provider', to: 'oauth#results', as: 'oauth_results'
-
-    root to: 'users#index'
+  get 'oauth/redirect' #for testing
+  # get 'authorize' => 'oauth#gettoken'
+  get 'results/:provider', to: 'oauth#results', as: 'oauth_results' #@spencer to look at
   # added by paul end
 
-  get 'user_sessions/new'
+  # get 'twitter/index'
 
-  get 'user_sessions/create'
-
-  get 'user_sessions/destroy'
-
-  resources :user_sessions
+  resources :user_sessions #@spencer do we need this??
   resources :users
 
   get 'login' => 'user_sessions#new', as: :login
@@ -28,7 +20,14 @@ Rails.application.routes.draw do
 
   # get 'github/redirect_git'
   # get 'github/callback_git'
-  get 'github/results_git'
+  # get 'github/results_git'
+
+  get 'oauths/oauth'
+  get 'oauths/callback'
+  post "oauth/callback" => "oauths#callback"
+  get 'oauth/callback_outlook' #@spencer look at this and make sure it's added in controller
+  get "oauth/callback" => "oauths#callback"
+  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
