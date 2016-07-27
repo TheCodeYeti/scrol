@@ -1,17 +1,34 @@
 Rails.application.routes.draw do
+
+  root to: 'users#index' #to update to messages#index
+
+  get 'mail/index'
+
+  # added by paul start
+  get 'oauth/redirect' #for testing
+  # get 'authorize' => 'oauth#gettoken'
+  get 'results/:provider', to: 'oauth#results', as: 'oauth_results' #@spencer to look at
+  # added by paul end
+
   get 'twitter/index'
 
-  get 'user_sessions/new'
-
-  get 'user_sessions/create'
-
-  get 'user_sessions/destroy'
-  root to: 'users#index'
-  resources :user_sessions
+  resources :user_sessions #@spencer do we need this??
   resources :users
 
   get 'login' => 'user_sessions#new', as: :login
   post 'logout' => 'user_sessions#destroy', as: :logout
+
+  get 'github/redirect_git'
+  get 'github/callback_git'
+  get 'github/results_git'
+
+  get 'oauths/oauth'
+  get 'oauths/callback'
+  post "oauth/callback" => "oauths#callback"
+  get 'oauth/callback_outlook' #@spencer look at this and make sure it's added in controller
+  get "oauth/callback" => "oauths#callback"
+  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
