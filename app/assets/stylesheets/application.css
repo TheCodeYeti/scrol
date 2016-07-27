@@ -14,10 +14,10 @@
  *= require_self
  */
 
-
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
 body{
   background-color: #f4fffd;
+  margin-left: 120px;
 }
  .sidenav, .sidenav-bar {
    height: 100%;
@@ -111,11 +111,7 @@ body{
   color: #325575;
 }
 
-
 .open{
   width: 10em;
   height: 100%;
-}
-body {
-  margin-left: 120px;
 }

@@ -20,7 +20,7 @@
   margin: 0 0 20px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-
+}
 
 label{
   position: absolute;
@@ -30,7 +30,6 @@ label{
   transition: all 0.25s ease-in-out;
   font-size: 22px;
   pointer-events: none;
-
 }
 
 .req{
@@ -64,17 +63,6 @@ input, textarea {
 }
 
 input:not([type='submit']):focus {
-  font-size: 18px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 5px 10px;
-  border: 1px solid #94a6ab;
-  color: #ffffff;
-  transition: border-color .25s ease;
-}
-
-input:focus {
   outline: 0;
   border-color: #92b5bf;
 }
@@ -100,18 +88,4 @@ input[type='submit']{
 
 input[type='submit']:hover{
   background: #266c66;
-}
-
-.actions{
-  border: 0;
-  outline: none;
-  padding: 15px 0;
-  text-transform: uppercase;
-  background-color: #33867e;
-  color: #ffffff;
-  transition: all 0.5s ease;
-}
-
-.actions:hover, .actions:focus{
-  background-color: #2b6f68;
 }
