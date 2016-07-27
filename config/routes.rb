@@ -2,12 +2,14 @@ Rails.application.routes.draw do
 
   get 'mail/index'
 
+
   # added by paul start
-    get 'gmail/redirect'
-    get 'gmail/callback'
-    get 'gmail/labels'
-    get 'authorize' => 'auth#gettoken'
-    # root 'application#home'
+  get 'oauth/redirect'
+
+  get 'authorize' => 'oauth#gettoken'
+  get 'oauth/callback'
+  get 'oauth/callback_outlook'
+  get 'results/:provider', to: 'oauth#results', as: 'oauth_results'
 
     root to: 'users#index'
   # added by paul end
@@ -24,8 +26,8 @@ Rails.application.routes.draw do
   get 'login' => 'user_sessions#new', as: :login
   post 'logout' => 'user_sessions#destroy', as: :logout
 
-  get 'github/redirect_git'
-  get 'github/callback_git'
+  # get 'github/redirect_git'
+  # get 'github/callback_git'
   get 'github/results_git'
 
   # The priority is based upon order of creation: first created -> highest priority.
