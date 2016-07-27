@@ -1,0 +1,41 @@
+<h1>Threads</h1>
+
+<p>
+  message count <%=  @messages.inspect %>
+</p>
+
+<% @messages.each { |message| %>
+<ul>
+  <li>
+    <p>
+      count <%=  @messages.length %>
+    </p>
+    </p>
+
+
+     'message_id'  <%= message.message_id %>
+    </p>
+    <p>
+    'subject'  <%= message.title %>
+    </p>
+    <p>
+    'type'  <%= message.message_type %>
+    </p>
+    <p>
+    'timestamp'  <%= message.timestamp %>
+    </p>
+    <p>
+    'body'  <%= message.body %>
+    </p>
+    <p>
+    'source'  <%= message.source %>
+    </p>
+    <p>
+    'message_id'  <%= message.message_id %>
+    </p>
+    <p>
+    'snippet'  <%= message.snippet %>
+    </p>
+  </li>
+</ul>
+<% } %>
