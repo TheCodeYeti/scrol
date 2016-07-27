@@ -38,7 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Simple Password Authentication and OAuth
-gem 'sorcery', path: '../sorcery'
+gem 'sorcery' #, path: '../sorcery' # this is for debugging
 
 # store all keys in application.yml and use a nifty ENV variable to access
 gem "figaro"
