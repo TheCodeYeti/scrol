@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(function(){
+
+  $('.sidenav').on('mouseover', function(){
+    // e.preventDefault()
+    $('.sidenav-bar').addClass('open');
+  });
+
+  $('.sidenav').on('mouseout', function(){
+    $('.sidenav-bar').removeClass('open');
+  });
+});
