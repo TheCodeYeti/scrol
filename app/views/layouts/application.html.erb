@@ -13,20 +13,23 @@
   </head>
   <body>
 
-    <nav>
+    <nav class= "top-nav">
+      <ul class= "nav-ul">
+        <% if current_user %>
+          <li>
+          <!-- @spencer should current_user.id be current_user? -->
+          <%= link_to 'Edit Profile', edit_user_path(current_user.id) %>
+          </li>
+          <li><%= link_to 'Logout', :logout, method: :post %></li>
 
-      <% if current_user %>
+        <% else %>
 
-        <!-- @spencer should current_user.id be current_user? -->
-        <%= link_to 'Edit Profile', edit_user_path(current_user.id) %>
-        <%= link_to 'logout', :logout, method: :post %>
+          <li><%= link_to 'Register', new_user_path %></li>
+          <li><%= link_to 'Login', :login %></li>
 
-      <% else %>
+        <% end %>
 
-        <%= link_to 'Register', new_user_path %>
-        <%= link_to 'login', :login %>
-
-      <% end %>
+      </ul>
 
     </nav>
 
@@ -36,6 +39,7 @@
       <p id='alert'><%= flash[:alert] %></p>
 
     </div>
+    <% if current_user %> <!-- Shari: if statement makes the side nav only show up if user is logged in-->
     <div class= "nav-wrapper">
       <ul class= "sidenav">
         <li title="user-icon"><a class="user-icon" href="#">User</a></li>
@@ -54,6 +58,10 @@
         <li><a href="#">Facebook</a></li>
         <li><a href="#">instagram</a></li>
       </ul>
+    </div>
+    <%end%>
+    <div class="nav-placeholder">
+      " "
     </div>
     <main class="main-content">
         <%= yield %>

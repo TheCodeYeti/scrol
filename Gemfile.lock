@@ -49,8 +49,6 @@ GEM
     builder (3.2.2)
     byebug (9.0.5)
     coderay (1.1.1)
-<<<<<<< HEAD
-=======
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -58,7 +56,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
->>>>>>> master
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     domain_name (0.5.20160615)
@@ -73,8 +70,6 @@ GEM
       thor (~> 0.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-<<<<<<< HEAD
-=======
     google-api-client (0.8.6)
       activesupport (>= 3.2)
       addressable (~> 2.3)
@@ -94,7 +89,6 @@ GEM
       multi_json (~> 1.11)
       os (~> 0.9)
       signet (~> 0.7)
->>>>>>> master
     http (1.0.4)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -124,10 +118,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-<<<<<<< HEAD
-=======
     memoist (0.14.0)
->>>>>>> master
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     method_source (0.8.2)
@@ -158,11 +149,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-<<<<<<< HEAD
-=======
     pry-rails (0.3.4)
       pry (>= 0.9.10)
->>>>>>> master
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -207,14 +195,11 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-<<<<<<< HEAD
-=======
     signet (0.7.3)
       addressable (~> 2.3)
       faraday (~> 0.9)
       jwt (~> 1.5)
       multi_json (~> 1.10)
->>>>>>> master
     simple_oauth (0.3.1)
     slop (3.6.0)
     sorcery (0.9.1)
@@ -262,12 +247,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-<<<<<<< HEAD
-  figaro
-  jbuilder (~> 2.0)
-  jquery-rails
-  pry
-=======
   coffee-rails (~> 4.1.0)
   figaro
   google-api-client (= 0.8.6)
@@ -276,7 +255,6 @@ DEPENDENCIES
   oauth2
   octokit (~> 4.0)
   pry-rails
->>>>>>> master
   rails (= 4.2.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
