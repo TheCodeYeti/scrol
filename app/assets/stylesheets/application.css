@@ -19,7 +19,7 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
 body{
   background-color: #f4fffd;
-  margin-left: 0;
+  margin-left: 100px;
 }
 
 .main-content {
