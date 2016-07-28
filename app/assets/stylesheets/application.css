@@ -18,25 +18,87 @@
  }
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
 body{
-  background-color: #f4fffd;
-  margin-left: 0;
+  background-color: #FFFEFF;
+}
+a:hover {
+  background-color: transparent;
+  color: #243a47;
 }
 
 .main-content {
   max-width: 1024px;
   min-width: 760px;
-  margin: 0 auto;
+  margin-left: 200px
 }
+.nav-placeholder{
+  width: 140px;
+  height: 100%;
+  background-color: green;
+}
+.top-nav{
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: #DFE7ED;
+  color: #ffffff;
+}
+
+.nav-ul{
+  list-style: none;
+  float: right;
+  padding-right: 45px;
+}
+
+.nav-ul li{
+  display: inline-block;
+
+}
+
+.nav-ul li a{
+  color: #272B37;
+  text-decoration: none;
+  padding: 0 20px;
+  border-right: solid 1px #272B37;
+}
+
+.nav-ul li:last-child{
+  border-right: 0px;
+}
+
+.notifications {
+  position: relative;
+}
+#notice, #alert{
+  height: 30%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  padding: 0 0 0 85px;
+  position: absolute;
+}
+
+#alert{
+  background-color: #EF6F6C;
+}
+
+#notice{
+  background-color: #8AEA92;
+}
+
  .sidenav, .sidenav-bar {
    height: 100%;
    top: 0;
    left: 0;
-   background: #2f4858;
-   z-index: 10;
+   background: #272B37;
+   z-index: 1000;
    width: 5em;
    position: fixed;
    overflow: hidden;
-   /*display: block;*/
+   display: block;
    margin: 0;
    padding: 0;
    list-style-type: none;
@@ -50,7 +112,7 @@ body{
    line-height: 5em;
    text-align: center;
    color: #22B58B;
-   background-color: #2f4858;
+   background-color: #272B37;
    position: relative;
    border-bottom: 1px solid #243a47;
    transition: background 0.1s ease-in-out;
@@ -70,6 +132,10 @@ body{
  .sidenav li a:hover{
    color: #59d6cd;
 
+ }
+
+ .sidenav li a:hover{
+   color: #59d6cd;
  }
 
  .sidenav li a.user-icon:before{

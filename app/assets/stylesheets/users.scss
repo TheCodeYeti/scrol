@@ -1,7 +1,7 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
+// -------- signup-form ---------------------- //
 .signup-form {
   background: #2f4858;
   padding: 40px;
@@ -87,3 +87,5 @@ input[type='submit']{
 input[type='submit']:hover{
   background: #266c66;
 }
+
+// ---------- end signup-form -------------- //
