@@ -35,13 +35,14 @@ a:hover {
   /*overflow: hidden;*/
   position: relative;
   overflow: hidden;
-  left:65px;
-  margin: auto;
-  padding: 25px;
+  /*left:65px;*/
+  /*margin: auto;
+  padding: 25px;*/
   /*background-color: yellow;*/
 }
 
-/*     GROUPING       */
+/*  GROUPING   ============================================================================= */
+
 .group:before,
 .group:after{
   content: "";
@@ -65,13 +66,8 @@ a:hover {
 	width: 32.26%;
 }
 
-/*    end GRID of 3   */
+/*  NAVIGATION   ============================================================================= */
 
-.nav-placeholder{
-  width: 140px;
-  height: 100%;
-  background-color: green;
-}
 .top-nav{
   height: 50px;
   width: 100%;
@@ -107,29 +103,6 @@ a:hover {
 
 .nav-ul li:last-child a{
   border-right: 0px;
-}
-
-/*.notifications {
-  position: relative;
-}*/
-#notice, #alert{
-  width: 100%;
-  text-align: center;
-  margin-top: 0;
-  /*padding: 8px 0 0 85px;*/
-
-  /*position: absolute;*/
-}
-
-#alert{
-  background-color: #EF6F6C;
-  color: #ffffff;
-  bottom: 22px;
-}
-
-#notice{
-  background-color: #8AEA92;
-  color: #ffffff;
 }
 
  .sidenav, .sidenav-bar {
@@ -177,10 +150,10 @@ a:hover {
   font-size: 1.4em;
  }
 
- /*.sidenav li a:hover{
+ .sidenav li a:hover{
    color: #59d6cd;
 
- }*/
+ }
 
  .sidenav li a {
     color:#22B58B;
@@ -228,8 +201,37 @@ a:hover {
   height: 100%;
 }
 
-/* CONTAINERS AND SECTIONS  ============================================================================= */
+/* NOTIFICATIONS  ============================================================================= */
 
+/*.notifications {
+  position: relative;
+}*/
+#notice, #alert{
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  display: none;
+  /*padding: 8px 0 0 85px;*/
+
+  /*position: absolute;*/
+}
+
+#alert{
+  background-color: #EF6F6C;
+  color: #ffffff;
+  bottom: 22px;
+}
+
+#notice{
+  background-color: #8AEA92;
+  color: #ffffff;
+}
+/* CONTAINERS AND SECTIONS  ============================================================================= */
+.container{
+  left:65px;
+  margin: auto;
+  padding: 25px;
+}
 .section {
 	clear: both;
 	padding: 0px;

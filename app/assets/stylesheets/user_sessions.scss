@@ -2,6 +2,44 @@
   box-sizing: border-box;
 }
 
+/*  HERO IMG   ======================================================================== */
+img {
+  max-width:100%;
+  overflow: hidden;
+}
+.hero-banner{
+  position: relative;
+  /*background: url(assets/hero-img.jpg) no-repeat center center fixed;*/
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+/*  BUTTON   ============================================================================= */
+
+.signup-btn, .login-btn{
+  font-size: 1.5em;
+  display: block;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.33);
+  border-radius: 8px;
+  border: 2px solid #DFE7ED;
+  position: absolute;
+  z-index: 10;
+  top: 60%;
+  left: 35%;
+  color: #fff;
+}
+
+.signup-btn{
+  margin-left: 130px;
+}
+
+.signup-btn:hover, .login-btn:hover{
+  background-color: rgba(170, 244, 241, 0.73);
+}
+
+/*  LOGIN FORM   ===================================================================== */
 .login-form {
   position:relative;
   left: 45px;
