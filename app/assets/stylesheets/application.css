@@ -159,8 +159,7 @@ a:hover {
     color:#22B58B;
     text-decoration:none;
        line-height: 2em;
-    transition:
-      color ease .35s,
+    transition: color ease .35s;
 }
 .sidenav li a:hover {
     color:#59d6cd;
