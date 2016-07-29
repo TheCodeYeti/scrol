@@ -13,11 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
 $(function(){
 
   $('.sidenav').on('mouseover', function(){
     // e.preventDefault()
     $('.sidenav-bar').addClass('open');
+
   });
 
   $('.sidenav').on('mouseout', function(){
@@ -34,8 +36,18 @@ $(function(){
     Using ajax calls to get data from the database
   */
 
-  $('.user-icon').on('click', function(){
+  $('.user-icon').on('click', function(event){
     alert("This is also working !!!")
+    event.preventDefault()
+
+    $.ajax({
+      url: $('.user-icon').attr('action'),
+      method: 'GET',
+      data: {},
+      dataType: 'html'
+    }).done(function(responseData){
+      console.log(responseData);
+    })
   });
 
   $('.youtube').on('click', function(){
