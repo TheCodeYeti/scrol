@@ -131,6 +131,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     naught (1.1.0)
+    newrelic_rpm (3.16.0.318)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -261,6 +262,7 @@ DEPENDENCIES
   google-api-client (= 0.8.6)
   jbuilder (~> 2.0)
   jquery-rails
+  newrelic_rpm
   oauth2
   octokit (~> 4.0)
   pg

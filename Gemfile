@@ -60,6 +60,18 @@ gem "figaro"
 # 3 legged Oauth
 # gem 'oauth2'
 
+group :production do
+  # => Server
+  gem 'puma'
+
+  # => App monitoring
+  gem 'newrelic_rpm'
+
+  # => server
+  gem 'rails_12factor'
+
+
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
