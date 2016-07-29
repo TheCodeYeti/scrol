@@ -1,19 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="user-container">
+  <p id="notice"><%= notice %></p>
+  <h3>Your Info</h3>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
 
-<p>
-  <strong>Crypted password:</strong>
-  <%= @user.crypted_password %>
-</p>
+  <h2>Connections</h2>
 
-<p>
-  <strong>Salt:</strong>
-  <%= @user.salt %>
-</p>
+  <div class="connection">
+    <%= @user.authentications.each do |authentication| %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+      <%= authentication.provider %>
+      <%= authentication.username %>
+      <%= authentication.oauth_token %>
+
+    <% end %>
+  </div>
+
+  <div class="connection">
+    Google: <%= link_to 'Connect', auth_at_provider_url('google') %><br>
+    Git: <%= link_to 'Connect', github_redirect_git_path %>
+
+  </div>
+
+
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+
+</div>

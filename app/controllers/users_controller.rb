@@ -16,6 +16,10 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    #Shari: if statement to redirect users from signing up while logged in
+    if current_user != nil
+      redirect_back_or_to(:users, alert: 'Already Logged In')
+    end
     @user = User.new
   end
 
@@ -30,6 +34,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        #Shari
+        #logs in user automatically upon signup
+        session[:user_id] = @user.id
         format.html { redirect_to :users, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else

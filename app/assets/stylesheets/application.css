@@ -6,10 +6,186 @@
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
  *
  *= require_tree .
  *= require_self
  */
+ *, *:before, *:after {
+   box-sizing: border-box;
+ }
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
+body{
+  background-color: #FFFEFF;
+}
+a:hover {
+  background-color: transparent;
+  color: #243a47;
+}
+
+.main-content {
+  max-width: 1024px;
+  min-width: 760px;
+  margin-left: 200px
+}
+.nav-placeholder{
+  width: 140px;
+  height: 100%;
+  background-color: green;
+}
+.top-nav{
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: #DFE7ED;
+  color: #ffffff;
+}
+
+.nav-ul{
+  list-style: none;
+  float: right;
+  padding-right: 45px;
+}
+
+.nav-ul li{
+  display: inline-block;
+
+}
+
+.nav-ul li a{
+  color: #272B37;
+  text-decoration: none;
+  padding: 0 20px;
+  border-right: solid 1px #272B37;
+}
+
+.nav-ul li:last-child{
+  border-right: 0px;
+}
+
+.notifications {
+  position: relative;
+}
+#notice, #alert{
+  height: 30%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  padding: 0 0 0 85px;
+  position: absolute;
+}
+
+#alert{
+  background-color: #EF6F6C;
+}
+
+#notice{
+  background-color: #8AEA92;
+}
+
+ .sidenav, .sidenav-bar {
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: #272B37;
+   z-index: 1000;
+   width: 5em;
+   position: fixed;
+   overflow: hidden;
+   display: block;
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+ }
+
+ .sidenav li a{
+   display: block;
+   height: 5em;
+   width: 5em;
+   text-indent: 50em;
+   line-height: 5em;
+   text-align: center;
+   color: #22B58B;
+   background-color: #272B37;
+   position: relative;
+   border-bottom: 1px solid #243a47;
+   transition: background 0.1s ease-in-out;
+ }
+
+ .sidenav li a:before{
+  font-family: FontAwesome;
+  text-indent: 0em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+ }
+
+ .sidenav li a:hover{
+   color: #59d6cd;
+
+ }
+
+ .sidenav li a:hover{
+   color: #59d6cd;
+ }
+
+ .sidenav li a.user-icon:before{
+   content: "\f007";
+ }
+
+ .sidenav li a.google-plus:before{
+   content: "\f0d5";
+ }
+
+ .sidenav li a.youtube:before{
+   content: "\f16a";
+ }
+
+ .sidenav li a.twitter:before{
+   content: "\f099";
+ }
+
+ .sidenav li a.facebook:before{
+   content: "\f09a";
+ }
+
+ .sidenav li a.instagram:before{
+   content: "\f16d";
+ }
+
+.sidenav-bar{
+  overflow: hidden;
+  left: 5em;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  transition: all 0.1s ease-in-out;
+}
+
+.sidenav-bar li a{
+  display: block;
+  height: 5em;
+  line-height: 5em;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  position: relative;
+  border-bottom: 1px solid #355163;
+  transition: background 0.1s ease-in-out;
+  font-family: Arial, sans-serif;
+  color: #325575;
+}
+
+.open{
+  width: 10em;
+  height: 100%;
+}
