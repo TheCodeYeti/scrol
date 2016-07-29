@@ -17,14 +17,14 @@
    box-sizing: border-box;
  }
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
-body{
+body {
   background-color: #FFFEFF;
 }
 a:hover {
   background-color: transparent;
 }
 
-.wrapper{
+.wrapper {
   margin: auto;
 }
 
@@ -44,12 +44,12 @@ a:hover {
 /*  GROUPING   ============================================================================= */
 
 .group:before,
-.group:after{
+.group:after {
   content: "";
   display:table;
 }
 
-.group:after{
+.group:after {
   clear: both;
 }
 /*  GRID OF THREE   ============================================================================= */
@@ -68,7 +68,7 @@ a:hover {
 
 /*  NAVIGATION   ============================================================================= */
 
-.top-nav{
+.top-nav {
   height: 50px;
   width: 100%;
   margin: 0;
@@ -79,33 +79,34 @@ a:hover {
   background-color: #DFE7ED;
   color: #ffffff;
 }
-.top-nav a:hover{
+.top-nav a:hover {
   color: #243a47;
   text-decoration: underline;
 }
-.nav-ul{
+.nav-ul {
   list-style: none;
   float: right;
   padding-right: 45px;
 }
 
-.nav-ul li{
+.nav-ul li {
   display: inline-block;
 
 }
 
-.nav-ul li a{
+.nav-ul li a {
   color: #272B37;
   text-decoration: none;
   padding: 0 20px;
   border-right: solid 1px #272B37;
 }
 
-.nav-ul li:last-child a{
+.nav-ul li:last-child a {
   border-right: 0px;
 }
 
- .sidenav, .sidenav-bar {
+ .sidenav,
+ .sidenav-bar {
    height: 100%;
    top: 0;
    left: 0;
@@ -121,11 +122,11 @@ a:hover {
    transition: width ease .5s;
  }
 
- .sidenav li{
+ .sidenav li {
    border-bottom: 1px solid #243a47;
  }
 
- .sidenav li a{
+ .sidenav li a {
    display: block;
    height: 5em;
    width: 5em;
@@ -139,7 +140,7 @@ a:hover {
    transition: background 0.1s ease-in-out;
  }
 
- .sidenav li a:before{
+ .sidenav li a:before {
   font-family: FontAwesome;
   text-indent: 0em;
   position: absolute;
@@ -150,7 +151,7 @@ a:hover {
   font-size: 1.4em;
  }
 
- .sidenav li a:hover{
+ .sidenav li a:hover {
    color: #59d6cd;
 
  }
@@ -171,31 +172,31 @@ a:hover {
    }
  }
 
- .sidenav li a.user-icon:before{
+ .sidenav li a.user-icon:before {
    content: "\f007";
  }
 
- .sidenav li a.google-plus:before{
+ .sidenav li a.google-plus:before {
    content: "\f0d5";
  }
 
- .sidenav li a.youtube:before{
+ .sidenav li a.youtube:before {
    content: "\f16a";
  }
 
- .sidenav li a.twitter:before{
+ .sidenav li a.twitter:before {
    content: "\f099";
  }
 
- .sidenav li a.facebook:before{
+ .sidenav li a.facebook:before {
    content: "\f09a";
  }
 
- .sidenav li a.instagram:before{
+ .sidenav li a.instagram:before {
    content: "\f16d";
  }
 
-.open{
+.open {
   width: 20em;
   height: 100%;
 }
@@ -205,7 +206,8 @@ a:hover {
 /*.notifications {
   position: relative;
 }*/
-#notice, #alert{
+#notice,
+#alert {
   width: 100%;
   text-align: center;
   margin-top: 0;
@@ -215,13 +217,13 @@ a:hover {
   /*position: absolute;*/
 }
 
-#alert{
+#alert {
   background-color: #EF6F6C;
   color: #ffffff;
   bottom: 22px;
 }
 
-#notice{
+#notice {
   background-color: #8AEA92;
   color: #ffffff;
 }
