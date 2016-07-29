@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160727004615) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "authentications", force: :cascade do |t|
     t.integer  "user_id",      null: false
     t.string   "provider",     null: false
@@ -25,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160727004615) do
     t.string   "username"
   end
 
-  add_index "authentications", ["provider", "uid"], name: "index_authentications_on_provider_and_uid"
+  add_index "authentications", ["provider", "uid"], name: "index_authentications_on_provider_and_uid", using: :btree
 
   create_table "messages", force: :cascade do |t|
     t.string   "title"
@@ -48,6 +51,6 @@ ActiveRecord::Schema.define(version: 20160727004615) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
