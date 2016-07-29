@@ -1,5 +1,17 @@
 <h1>Threads</h1>
-
+<div class="section group">
+  <% @messages.each { |tweet| %>
+    <div class="col span_1_2">
+      <p class="tweet-msg">
+        <%= message.title %>
+        <%= message.snippet %>
+        <%= message.timestamp %> <!--apply .strf() method later -->
+        <%= message.url %>
+      </p>
+    </div>
+  <% } %>
+  <!-- </div>
+</div>
 <% @messages.each { |message| %>
 <ul>
   <li>
@@ -14,7 +26,7 @@
     </p>
   </li>
 </ul>
-<% } %>
+<% } %> -->
 
 <h1>A Message</h1>
 

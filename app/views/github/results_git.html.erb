@@ -1,5 +1,16 @@
-<h1>Test</h1>
-
+<h1>Github Messages</h1>
+<div class="section group">
+    <% @results.each { |result| %>
+      <div class="col span_1_2">
+        <p class="messages">
+          <%= result.subject.title %>
+          <%= result.repository.name %>
+          <%= result.repository.owner.login %> <!--apply .strf() method later -->
+          <%= result.updated_at %>
+          <%= result.repository.html_url %>
+        </p>
+      </div>
+    <% } %>
 <ul>
   <% @results.each { |result| %>
   <li>

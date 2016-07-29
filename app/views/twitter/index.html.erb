@@ -1,8 +1,15 @@
 <h1>Your Twitter Feed</h1>
-  <%= link_to 'Back to Home', root_url %>
-  <button type="button" id="refreshBtn" name="button">Reload Tweets</button>
+<button type="button" id="refreshBtn" name="button">Reload Tweets</button>
+<div class="section group">
   <% @tweets.each do |tweet| %>
+    <div class="col span_1_2">
       <p class="tweets">
-        <%#= tweet.text %>
+        <%= tweet.title %>
+        <%= tweet.body %>
+        <%= tweet.timestamp %> <!--apply .strf() method later -->
+        <%= tweet.url %>
       </p>
+    </div>
   <% end %>
+</div>
+<%= link_to 'Back to Home', root_url %>
