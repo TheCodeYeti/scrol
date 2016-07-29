@@ -1,8 +1,8 @@
-<h1>Tweets from Twitter!!</h1>
+<h1>Your Twitter Feed</h1>
   <%= link_to 'Back to Home', root_url %>
   <button type="button" id="refreshBtn" name="button">Reload Tweets</button>
   <% @tweets.each do |tweet| %>
-      <p id="tweets">
+      <p class="tweets">
         <%#= tweet.text %>
       </p>
   <% end %>

@@ -22,14 +22,51 @@ body{
 }
 a:hover {
   background-color: transparent;
-  color: #243a47;
+}
+
+.wrapper{
+  margin: auto;
 }
 
 .main-content {
-  max-width: 1024px;
-  min-width: 760px;
-  margin-left: 200px
+  /*max-width: 1024px;
+  min-width: 760px;*/
+  /*margin-left: 70px; */
+  /*overflow: hidden;*/
+  position: relative;
+  overflow: hidden;
+  left:65px;
+  margin: auto;
+  padding: 25px;
+  background-color: yellow;
 }
+
+/*     GROUPING       */
+.group:before,
+.group:after{
+  content: "";
+  display:table;
+}
+
+.group:after{
+  clear: both;
+}
+/*  GRID OF THREE   ============================================================================= */
+
+.span_3_3 {
+	width: 100%;
+}
+
+.span_2_3 {
+	width: 66.13%;
+}
+
+.span_1_3 {
+	width: 32.26%;
+}
+
+/*    end GRID of 3   */
+
 .nav-placeholder{
   width: 140px;
   height: 100%;
@@ -46,7 +83,10 @@ a:hover {
   background-color: #DFE7ED;
   color: #ffffff;
 }
-
+.top-nav a:hover{
+  color: #243a47;
+  text-decoration: underline;
+}
 .nav-ul{
   list-style: none;
   float: right;
@@ -65,28 +105,31 @@ a:hover {
   border-right: solid 1px #272B37;
 }
 
-.nav-ul li:last-child{
+.nav-ul li:last-child a{
   border-right: 0px;
 }
 
-.notifications {
+/*.notifications {
   position: relative;
-}
+}*/
 #notice, #alert{
-  height: 30%;
   width: 100%;
   text-align: center;
   margin-top: 0;
-  padding: 0 0 0 85px;
-  position: absolute;
+  /*padding: 8px 0 0 85px;*/
+
+  /*position: absolute;*/
 }
 
 #alert{
   background-color: #EF6F6C;
+  color: #ffffff;
+  bottom: 22px;
 }
 
 #notice{
   background-color: #8AEA92;
+  color: #ffffff;
 }
 
  .sidenav, .sidenav-bar {
@@ -95,26 +138,31 @@ a:hover {
    left: 0;
    background: #272B37;
    z-index: 1000;
-   width: 5em;
+   width: 50px;
    position: fixed;
    overflow: hidden;
    display: block;
    margin: 0;
    padding: 0;
    list-style-type: none;
+   transition: width ease .5s;
+ }
+
+ .sidenav li{
+   border-bottom: 1px solid #243a47;
  }
 
  .sidenav li a{
    display: block;
    height: 5em;
    width: 5em;
-   text-indent: 50em;
+   text-indent: 10em;
    line-height: 5em;
    text-align: center;
+   vertical-align: middle;
    color: #22B58B;
    background-color: #272B37;
    position: relative;
-   border-bottom: 1px solid #243a47;
    transition: background 0.1s ease-in-out;
  }
 
@@ -129,13 +177,26 @@ a:hover {
   font-size: 1.4em;
  }
 
- .sidenav li a:hover{
+ /*.sidenav li a:hover{
    color: #59d6cd;
 
- }
+ }*/
 
- .sidenav li a:hover{
-   color: #59d6cd;
+ .sidenav li a {
+    color:#22B58B;
+    text-decoration:none;
+       line-height: 2em;
+    transition:
+      color ease .35s,
+}
+.sidenav li a:hover {
+    color:#59d6cd;
+}
+.sidenav li a.open {
+     font-size:1.75rem;
+     font-weight:700;
+     border:0;
+   }
  }
 
  .sidenav li a.user-icon:before{
@@ -162,30 +223,8 @@ a:hover {
    content: "\f16d";
  }
 
-.sidenav-bar{
-  overflow: hidden;
-  left: 5em;
-  z-index: 5;
-  width: 0;
-  height: 0;
-  transition: all 0.1s ease-in-out;
-}
-
-.sidenav-bar li a{
-  display: block;
-  height: 5em;
-  line-height: 5em;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  position: relative;
-  border-bottom: 1px solid #355163;
-  transition: background 0.1s ease-in-out;
-  font-family: Arial, sans-serif;
-  color: #325575;
-}
 
 .open{
-  width: 10em;
+  width: 20em;
   height: 100%;
 }

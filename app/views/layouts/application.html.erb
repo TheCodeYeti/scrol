@@ -12,7 +12,7 @@
 
   </head>
   <body>
-
+    <div class="wrapper">
     <nav class= "top-nav">
       <ul class= "nav-ul">
         <% if current_user %>
@@ -49,24 +49,14 @@
         <li title="facebook-icon"><a class="facebook" href="#">Facebook</a></li>
         <li title="instagram-icon"><a class="instagram" href="#">Instagram</a></li>
       </ul>
-
-      <ul class= "sidenav-bar">
-        <li><a href="#">User</a></li>
-        <li><a href="#">Gmail</a></li>
-        <li><a href="#">Youtube</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">instagram</a></li>
-      </ul>
     </div>
     <%end%>
-    <div class="nav-placeholder">
-      " "
-    </div>
+
     <main class="main-content">
         <%= yield %>
     </main>
 
   </body>
+</div>
   <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 </html>
