@@ -60,19 +60,6 @@ gem "figaro"
 # 3 legged Oauth
 # gem 'oauth2'
 
-group :production do
-  # => Server
-  gem 'puma'
-
-  # => App monitoring
-  gem 'newrelic_rpm'
-
-  # => server
-  gem 'rails_12factor'
-
-
-end
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -80,6 +67,7 @@ group :development, :test do
   gem 'pry-rails'
 
 end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
