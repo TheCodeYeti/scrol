@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'messages/index'
+
+  get 'messages/show'
+
   root to: 'user_sessions#index' #Shari: changed from users#index
 
   get 'mail/index'
