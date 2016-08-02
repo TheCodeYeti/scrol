@@ -83,7 +83,7 @@ a:hover {
   height: 35px;
   width: auto;
   float: left;
-  padding-left: 30px;
+  margin-left: 90px;
   margin-top: 5px;
 }
 .top-nav a:hover{

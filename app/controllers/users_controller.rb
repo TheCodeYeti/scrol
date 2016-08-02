@@ -31,13 +31,13 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    #Shari: changed redirect to user profile page instead of users index
     respond_to do |format|
       if @user.save
         #Shari
         #logs in user automatically upon signup
         session[:user_id] = @user.id
-        format.html { redirect_to :users, notice: 'User was successfully created.' }
+        format.html { redirect_to user_path(@user), notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to user_path(@user), notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
