@@ -4,7 +4,11 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+
+# database => postgreSQL
+gem 'pg'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -56,7 +60,6 @@ gem "figaro"
 # 3 legged Oauth
 # gem 'oauth2'
 
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -64,6 +67,7 @@ group :development, :test do
   gem 'pry-rails'
 
 end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -75,9 +79,11 @@ end
 
 group :production do
 
-gem 'puma'
 
-gem 'rails_12factor'
 
-gem 'pg'
+  gem 'rails_12factor'
+
+  # replace WEBrick web server with Puma
+  gem 'puma'
+
 end

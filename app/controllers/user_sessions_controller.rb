@@ -4,7 +4,10 @@ class UserSessionsController < ApplicationController
   # we may want the ability to destroy sessions that are broken
   # and i'm not sure if this prevents that - comment out if issues
   skip_before_action :require_login, except: [:destroy]
-
+  #Shari: added index for landing page
+  def index
+    # @user= User.new
+  end
 
   def new
     #Shari: if statement to redirect signed in users from logging in

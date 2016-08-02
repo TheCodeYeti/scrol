@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'users#index' #to update to messages#index
+  root to: 'user_sessions#index' #Shari: changed from users#index
 
   get 'mail/index'
 

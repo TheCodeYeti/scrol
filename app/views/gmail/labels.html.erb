@@ -1,22 +1,35 @@
+<div class="container">
 <h1>Threads</h1>
-
+<div class="section group">
+  <% @messages.each { |tweet| %>
+    <div class="col span_1_2">
+      <p class="tweet-msg">
+        <%= message.title %>
+        <%= message.snippet %>
+        <%= message.timestamp %> <!--apply .strf() method later -->
+        <%= message.url %>
+      </p>
+    </div>
+  <% } %>
+  <!-- </div>
+</div>
 <% @messages.each { |message| %>
 <ul>
   <li>
     <p>
-     'message.id'  <%= message.id %>
+     'message.title'  <%= message.title %>
     </p>
     <p>
     'message.snippet'  <%= message.snippet %>
     </p>
     <p>
-    'message.historyId'  <%= message.historyId %>
+    'message.url'  <%= message.url %>
     </p>
   </li>
 </ul>
-<% } %>
+<% } %> -->
 
-<h1>A Messge</h1>
+<h1>A Message</h1>
 
 <% @full_messages.each { |full_message| %>
 <ul>
@@ -37,7 +50,7 @@
     <p>
     'subject'  <%= full_message.data.payload.headers[12].value %>
     </p>
-    
+
     <p>
     'message'  <%= full_message.data.payload.parts[0].body.data.to_s.force_encoding("ISO-8859-1").encode("UTF-8") %>
   </p>
@@ -68,3 +81,4 @@
   </li>
 </ul>
 <% } %>
+</div>
