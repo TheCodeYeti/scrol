@@ -7,6 +7,10 @@ class UserSessionsController < ApplicationController
 
 
   def new
+    #Shari: if statement to redirect signed in users from logging in
+    if current_user != nil
+      redirect_back_or_to(:users, alert: 'Already Logged In')
+    end
     @user = User.new
   end
 
