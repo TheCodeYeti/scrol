@@ -22,7 +22,7 @@
 
     <div class="connection">
       Google: <%= link_to 'Connect', auth_at_provider_url('google') %><br>
-      Git: <%= link_to 'Connect', github_redirect_git_path %><br>
+      Git: <%= link_to 'Connect', auth_at_provider_url('github') %><br>
       Twitter: <%= link_to 'Connect', auth_at_provider_url('twitter') %>
 
     </div>
