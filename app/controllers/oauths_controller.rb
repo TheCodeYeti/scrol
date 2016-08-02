@@ -7,7 +7,7 @@ class OauthsController < ApplicationController
   end
 
   def callback
-    binding.pry
+    # binding.pry
     add_provider_to_user(params[:provider])
     auth = current_user.authentications.find_by_provider(params[:provider])
 
