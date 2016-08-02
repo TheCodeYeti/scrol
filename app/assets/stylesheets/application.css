@@ -79,6 +79,13 @@ a:hover {
   background-color: #DFE7ED;
   color: #ffffff;
 }
+.logo-nav{
+  height: 35px;
+  width: auto;
+  float: left;
+  padding-left: 30px;
+  margin-top: 5px;
+}
 .top-nav a:hover{
   color: #243a47;
   text-decoration: underline;
