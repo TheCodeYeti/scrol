@@ -202,9 +202,9 @@ a:hover {
 
 /* NOTIFICATIONS  ============================================================================= */
 
-/*.notifications {
-  position: relative;
-}*/
+.notifications {
+  display: none;
+}
 #notice, #alert{
   width: 100%;
   text-align: center;
