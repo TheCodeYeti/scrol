@@ -52,7 +52,7 @@ gem 'oauth2' #to remove
 # gem 'capistrano-rails', group: :development
 
 # Simple Password Authentication and OAuth
-gem 'sorcery' #, path: '../sorcery' # this is for debugging
+gem 'sorcery', path: '../sorcery' # this is for debugging
 
 # store all keys in application.yml and use a nifty ENV variable to access
 gem "figaro"
@@ -65,6 +65,8 @@ group :development, :test do
   gem 'byebug'
 
   gem 'pry-rails'
+
+  gem 'pry-byebug'
 
 end
 

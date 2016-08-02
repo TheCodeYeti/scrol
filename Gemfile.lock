@@ -1,3 +1,11 @@
+PATH
+  remote: ../sorcery
+  specs:
+    sorcery (0.9.1)
+      bcrypt (~> 3.1)
+      oauth (~> 0.4, >= 0.4.4)
+      oauth2 (>= 0.8.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -150,6 +158,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.4.0)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     puma (3.6.0)
@@ -209,10 +220,6 @@ GEM
       multi_json (~> 1.10)
     simple_oauth (0.3.1)
     slop (3.6.0)
-    sorcery (0.9.1)
-      bcrypt (~> 3.1)
-      oauth (~> 0.4, >= 0.4.4)
-      oauth2 (>= 0.8.0)
     spring (1.7.2)
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
@@ -264,13 +271,14 @@ DEPENDENCIES
   oauth2
   octokit (~> 4.0)
   pg
+  pry-byebug
   pry-rails
   puma
   rails (= 4.2.6)
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  sorcery
+  sorcery!
   spring
   turbolinks
   twitter

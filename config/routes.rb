@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
   get 'oauths/oauth'
   get 'oauths/callback'
+  post 'oauths/callback'
   post "oauth/callback" => "oauths#callback"
   get 'oauth/callback_outlook' #@spencer look at this and make sure it's added in controller
   get "oauth/callback" => "oauths#callback"
