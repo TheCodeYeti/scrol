@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'messages/index'
-
-  get 'messages/show'
-
   root to: 'user_sessions#index' #Shari: changed from users#index
 
   get 'mail/index'
@@ -18,6 +14,9 @@ Rails.application.routes.draw do
 
   resources :user_sessions #@spencer do we need this??
   resources :users
+  resources :messages
+
+  get 'messages/import/:user_id', to: 'messages#import', as: 'import_messages'
 
   get 'login' => 'user_sessions#new', as: :login
   post 'logout' => 'user_sessions#destroy', as: :logout
