@@ -1,4 +1,14 @@
 $(function(){
+
+  $('.close').on('click', function(){
+    $('.modal-login').fadeOut(500, 'swing');
+  });
+
+  $('.login-btn').on('click', function(e){
+    e.preventDefault();
+    $('.modal-login').fadeIn(500, 'swing');
+  });
+
   $('.login-form').find('input, textarea').on('keyup blur focus', function (e) {
 
   var $this = $(this),

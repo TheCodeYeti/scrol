@@ -16,7 +16,7 @@
  *, *:before, *:after {
    box-sizing: border-box;
  }
-@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
+/*@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");*/
 body{
   background-color: #FFFEFF;
 }
@@ -105,7 +105,7 @@ a:hover {
   border-right: 0px;
 }
 
- .sidenav, .sidenav-bar {
+ .sidenav{
    height: 100%;
    top: 0;
    left: 0;
@@ -131,8 +131,6 @@ a:hover {
    width: 5em;
    text-indent: 10em;
    line-height: 5em;
-   text-align: center;
-   vertical-align: middle;
    color: #22B58B;
    background-color: #272B37;
    position: relative;
@@ -165,11 +163,11 @@ a:hover {
     color:#59d6cd;
 }
 .sidenav li a.open {
-     font-size:1.75rem;
-     font-weight:700;
-     border:0;
-   }
- }
+  font-size:1.75rem;
+  font-weight:700;
+  border:0;
+}
+
 
  .sidenav li a.user-icon:before{
    content: "\f007";
@@ -227,9 +225,8 @@ a:hover {
 }
 /* CONTAINERS AND SECTIONS  ============================================================================= */
 .container {
-  left:65px;
-  margin: auto;
-  padding: 25px;
+  margin-left: 65px;
+  padding: 30px;
 }
 .section {
 	clear: both;
