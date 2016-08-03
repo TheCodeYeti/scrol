@@ -22,24 +22,25 @@ $(function(){
   $('.login_form_reload a').on('click', (function() {
     /* Act on the event */
 
-  //   $.ajax({
-  //     url: $(this).attr('href'),
-  //     type: 'GET',
-  //     dataType: 'html',
-  //     data: {}
-  //   })
-  //   .done(function() {
-  //     console.log("success");
-  //   })
-  //   .fail(function() {
-  //     console.log("error");
-  //   })
-  //   .always(function() {
-  //     console.log("complete");
-  //   });
-  //
-  //
-  // });
+    $.ajax({
+      url: $(this).attr('href'),
+      type: 'GET',
+      dataType: 'html',
+      data: {}
+    })
+    .done(function() {
+      console.log("success");
+    })
+    .fail(function() {
+      console.log("error");
+    })
+    .always(function() {
+      console.log("complete");
+    });
+
+
+  });
+  
   //***************************************************************//
   //***************************************************************//
 
