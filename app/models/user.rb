@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
   has_many :authentications, dependent: :destroy
+  has_many :messages
   accepts_nested_attributes_for :authentications
 
 end
