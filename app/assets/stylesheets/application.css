@@ -13,10 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
  *, *:before, *:after {
    box-sizing: border-box;
  }
+
 /*@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");*/
+
 body{
   background-color: #FFFEFF;
 }
@@ -24,35 +27,29 @@ a:hover {
   background-color: transparent;
 }
 
-.wrapper{
+.wrapper {
   margin: auto;
 }
 
 .main-content {
-  /*max-width: 1024px;
-  min-width: 760px;*/
-  /*margin-left: 70px; */
-  /*overflow: hidden;*/
   position: relative;
   overflow: hidden;
-  /*left:65px;*/
-  /*margin: auto;
-  padding: 25px;*/
-  /*background-color: yellow;*/
 }
 
-/*  GROUPING   ============================================================================= */
+/*  GROUPING   ================================================ */
 
 .group:before,
-.group:after{
+.group:after {
   content: "";
   display:table;
 }
 
-.group:after{
+.group:after {
   clear: both;
+  content: " ";
+  display: grid;
 }
-/*  GRID OF THREE   ============================================================================= */
+/*  GRID OF THREE   ========================================================== */
 
 .span_3_3 {
 	width: 100%;
@@ -66,9 +63,9 @@ a:hover {
 	width: 32.26%;
 }
 
-/*  NAVIGATION   ============================================================================= */
+/*  NAVIGATION   =========================================================== */
 
-.top-nav{
+.top-nav {
   height: 50px;
   width: 100%;
   margin: 0;
@@ -79,6 +76,7 @@ a:hover {
   background-color: #DFE7ED;
   color: #ffffff;
 }
+
 .logo-nav{
   height: 35px;
   width: auto;
@@ -90,29 +88,29 @@ a:hover {
   color: #243a47;
   text-decoration: underline;
 }
-.nav-ul{
+.nav-ul {
   list-style: none;
   float: right;
   padding-right: 45px;
 }
 
-.nav-ul li{
+.nav-ul li {
   display: inline-block;
 
 }
 
-.nav-ul li a{
+.nav-ul li a {
   color: #272B37;
   text-decoration: none;
   padding: 0 20px;
   border-right: solid 1px #272B37;
 }
 
-.nav-ul li:last-child a{
-  border-right: 0px;
+.nav-ul li:last-child a {
+  border-right: 0;
 }
 
- .sidenav{
+.sidenav {
    height: 100%;
    top: 0;
    left: 0;
@@ -128,11 +126,11 @@ a:hover {
    transition: width ease .5s;
  }
 
- .sidenav li{
+.sidenav li {
    border-bottom: 1px solid #243a47;
  }
 
- .sidenav li a{
+.sidenav li a {
    display: block;
    height: 5em;
    width: 5em;
@@ -144,9 +142,9 @@ a:hover {
    transition: background 0.1s ease-in-out;
  }
 
- .sidenav li a:before{
+.sidenav li a:before {
   font-family: FontAwesome;
-  text-indent: 0em;
+  text-indent: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -155,12 +153,12 @@ a:hover {
   font-size: 1.4em;
  }
 
- .sidenav li a:hover{
+.sidenav li a:hover {
    color: #59d6cd;
 
  }
 
- .sidenav li a {
+.sidenav li a {
     color:#22B58B;
     text-decoration:none;
        line-height: 2em;
@@ -175,32 +173,31 @@ a:hover {
   border:0;
 }
 
+.user-icon:before{
+  content: "\f007";
+}
 
- .sidenav li a.user-icon:before{
-   content: "\f007";
- }
+.google-plus:before{
+  content: "\f0d5";
+}
 
- .sidenav li a.google-plus:before{
-   content: "\f0d5";
- }
+.youtube:before{
+  content: "\f16a";
+}
 
- .sidenav li a.youtube:before{
-   content: "\f16a";
- }
+.twitter:before{
+  content: "\f099";
+}
 
- .sidenav li a.twitter:before{
-   content: "\f099";
- }
+.facebook:before{
+  content: "\f09a";
+}
 
- .sidenav li a.facebook:before{
-   content: "\f09a";
- }
+.instagram:before{
+  content: "\f16d";
+}
 
- .sidenav li a.instagram:before{
-   content: "\f16d";
- }
-
-.open{
+.open {
   width: 20em;
   height: 100%;
 }
@@ -210,26 +207,28 @@ a:hover {
 .notifications {
   display: none;
 }
-#notice, #alert{
+
+.notice{
   width: 100%;
   text-align: center;
   margin-top: 0;
   display: none;
-  /*padding: 8px 0 0 85px;*/
-
-  /*position: absolute;*/
+  background-color: #8AEA92;
+  color: #ffffff;
 }
 
-#alert{
+
+.alert{
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  display: none;
   background-color: #EF6F6C;
   color: #ffffff;
   bottom: 22px;
 }
 
-#notice{
-  background-color: #8AEA92;
-  color: #ffffff;
-}
+
 /* CONTAINERS AND SECTIONS  ============================================================================= */
 .container {
   margin-left: 65px;
@@ -237,8 +236,8 @@ a:hover {
 }
 .section {
 	clear: both;
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 }
 
 /*  GROUPING  ============================================================================= */
@@ -250,9 +249,6 @@ a:hover {
 }
 .group:after {
     clear:both;
-}
-.group {
-    zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
 
 /*  GRID COLUMN SETUP   ==================================================================== */

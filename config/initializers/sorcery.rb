@@ -112,7 +112,7 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.twitter.key = ENV['TWITTER_CONSUMER_KEY']
   config.twitter.secret = ENV['TWITTER_CONSUMER_SECRET']
-  config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
+  config.twitter.callback_url = "#{ENV['ROOT_URL']}/oauth/callback?provider=twitter"
   config.twitter.user_info_mapping = {:email => "email"}
   #
   # config.facebook.key = ""
@@ -125,12 +125,12 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.github.key = ENV['GITHUB_CLIENT_ID']
   config.github.secret = ENV['GITHUB_CLIENT_SECRET']
-  config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
+  config.github.callback_url = "#{ENV['ROOT_URL']}/oauth/callback?provider=github"
   config.github.user_info_mapping = {:email => "email"}
   #
   config.google.key = ENV['GOOGLE_API_CLIENT_ID']
   config.google.secret = ENV['GOOGLE_API_CLIENT_SECRET']
-  config.google.callback_url = "http://localhost:3000/oauth/callback?provider=google"
+  config.google.callback_url = "#{ENV['ROOT_URL']}/oauth/callback?provider=google"
   config.google.user_info_mapping = {:email => "email", :username => "username"}
   config.google.scope = "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/gmail.readonly"
 
