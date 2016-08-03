@@ -23,7 +23,6 @@ class MessagesController < ApplicationController
 
       when 'github'
         saveGitHubMessages(user, access_token)
-      end
 
       when 'twitter'
         saveTwitterMessages(user, access_token)
