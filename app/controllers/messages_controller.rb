@@ -2,9 +2,11 @@ class MessagesController < ApplicationController
   require 'google/api_client'
 
   def index
+    @messages = current_user.messages
   end
 
   def show
+    @message = messages.find(params[:id])
   end
 
   def import
@@ -23,7 +25,13 @@ class MessagesController < ApplicationController
         saveGitHubMessages(user, access_token)
       end
 
+      when 'twitter'
+        saveTwitterMessages(user, access_token)
+      end
+
     end
+
+    render :index
   end
 
   private
@@ -125,6 +133,10 @@ class MessagesController < ApplicationController
       end
 
     end
+
+  end
+
+  def saveTwitterMessages(user, access_token)
 
   end
 
