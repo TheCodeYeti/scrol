@@ -14,6 +14,7 @@
   <body>
     <div class="wrapper">
     <nav class= "top-nav">
+      <img src="assets/images/scrol.png" alt="logo" class="logo-nav" />
       <ul class= "nav-ul">
         <% if current_user %>
           <li>
@@ -35,8 +36,8 @@
 
     <div class="notifications">
 
-      <p id='notice'><%= flash[:notice] %></p>
-      <p id='alert'><%= flash[:alert] %></p>
+      <p class='notice'><%= flash[:notice] %></p>
+      <p class='alert'><%= flash[:alert] %></p>
 
     </div>
     <% if current_user %> <!-- Shari: if statement makes the side nav only show up if user is logged in-->
@@ -44,9 +45,9 @@
       <ul class= "sidenav">
         <li title="user-icon"><a class="fa fa-user" aria-hidden="true" href="#">User</a></li>
         <li title="gmail-icon"><a class="fa fa-google-plus" aria-hidden="true" href="#">Gmail</a></li>
-        <li title="youtube-icon"><a class="fa fa-github" aria-hidden="true" href="github_results_git_path">Github</a></li>
+        <li title="github-icon"><a class="fa fa-github" aria-hidden="true" href="github_results_git_path">Github</a></li>
         <li title="twitter-icon"><a class="fa fa-twitter" aria-hidden="true" href="twitter_index_path">Twitter</a></li>
-        <li title="facebook-icon"><a class="fa fa-envelope" aria-hidden="true" href="mail_index_path">Outlook</a></li>
+        <li title="outlook-icon"><a class="fa fa-envelope" aria-hidden="true" href="mail_index_path">Outlook</a></li>
       </ul>
     </div>
     <%end%>

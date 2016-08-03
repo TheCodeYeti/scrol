@@ -17,7 +17,8 @@
  *, *:before, *:after {
    box-sizing: border-box;
  }
-@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
+
+/*@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");*/
 
 body{
   background-color: #FFFEFF;
@@ -75,7 +76,15 @@ a:hover {
   background-color: #DFE7ED;
   color: #ffffff;
 }
-.top-nav a:hover {
+
+.logo-nav{
+  height: 35px;
+  width: auto;
+  float: left;
+  margin-left: 90px;
+  margin-top: 5px;
+}
+.top-nav a:hover{
   color: #243a47;
   text-decoration: underline;
 }
@@ -127,7 +136,6 @@ a:hover {
    width: 5em;
    text-indent: 10em;
    line-height: 5em;
-   text-align: center;
    color: #22B58B;
    background-color: #272B37;
    position: relative;
@@ -196,6 +204,10 @@ a:hover {
 
 /* NOTIFICATIONS  ============================================================================= */
 
+.notifications {
+  display: none;
+}
+
 .notice{
   width: 100%;
   text-align: center;
@@ -219,9 +231,8 @@ a:hover {
 
 /* CONTAINERS AND SECTIONS  ============================================================================= */
 .container {
-  left:65px;
-  margin: auto;
-  padding: 25px;
+  margin-left: 65px;
+  padding: 30px;
 }
 .section {
 	clear: both;
