@@ -16,6 +16,33 @@
 
 $(function(){
 
+  // Ajax request for the login form onclick
+
+
+  $('.login_form_reload a').on('click', (function() {
+    /* Act on the event */
+
+  //   $.ajax({
+  //     url: $(this).attr('href'),
+  //     type: 'GET',
+  //     dataType: 'html',
+  //     data: {}
+  //   })
+  //   .done(function() {
+  //     console.log("success");
+  //   })
+  //   .fail(function() {
+  //     console.log("error");
+  //   })
+  //   .always(function() {
+  //     console.log("complete");
+  //   });
+  //
+  //
+  // });
+  //***************************************************************//
+  //***************************************************************//
+
   $('.sidenav').on('mouseover', function(){
     // e.preventDefault()
     $('.sidenav').addClass('open');
@@ -24,10 +51,6 @@ $(function(){
 
   $('.sidenav').on('mouseout', function(){
     $('.sidenav').removeClass('open');
-  });
-
-  $('.google-plus').on('click', function(){
-     alert("This is working!!")
   });
 
   //These are the navigation links
@@ -41,13 +64,28 @@ $(function(){
     event.preventDefault()
 
     $.ajax({
-      url: $('.user-icon').attr('action'),
+      url: $(this).attr('href'),
       method: 'GET',
       data: {},
       dataType: 'html'
     }).done(function(responseData){
+      // 4. take the response from the server and render it on console
       console.log(responseData);
     })
+  });
+
+  $('.google-plus').on('click', function(event){
+     alert("This is working!!")
+     event.preventDefault()
+
+     $.ajax({
+       url: $(this).attr('href'),
+       method: 'GET',
+       data: {},
+       dataType: 'html'
+     }).done(function(responseData){
+       console.log(responseData);
+     })
   });
 
   $('.youtube').on('click', function(){
