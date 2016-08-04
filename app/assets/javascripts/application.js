@@ -14,95 +14,79 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(function(){
+$(function() {
+      $('.login_form_reload').on('click', function() {
+        $('.login_container').attr('href', function(){
+          $(this).fadeIn();
+        })
+      })
 
-  // Ajax request for the login form onclick
+      $('.sidenav').on('mouseover', function(){
+        // e.preventDefault()
+        $('.sidenav').addClass('open');
+
+      });
+
+      $('.sidenav').on('mouseout', function(){
+        $('.sidenav').removeClass('open');
+      });
+
+      $('.google-plus').on('click', function(){
+         alert("This is working!!")
+      });
+
+      //These are the navigation links
+      /******
+        render content on click on the home page
+        Using ajax calls to get data from the database
+      */
+
+      $('.user-icon').on('click', function(event){
+        alert("This is also working !!!")
+        event.preventDefault()
+
+        $.ajax({
+          url: $('.user-icon').attr('action'),
+          method: 'GET',
+          data: {},
+          dataType: 'html'
+        }).done(function(responseData){
+          console.log(responseData);
+        })
+      });
+
+      $('.youtube').on('click', function(){
+        alert("This can also be working hey!!!")
+      });
+
+      $('.twitter').on('click', function(event){
+        event.preventDefault()
+
+        $.ajax({
+          url: $(this).attr('href'),
+          type: 'GET',
+          dataType: 'html',
+          data: {param1: 4}
+        })
+        .done(function(responseData) {
+          console.log(responseData);
+        })
+        .fail(function() {
+          console.log("error");
+        })
+        .always(function() {
+          console.log("complete");
+        });
 
 
-  $('.login_form_reload a').on('click', (function() {
-    /* Act on the event */
+      });
 
-    $.ajax({
-      url: $(this).attr('href'),
-      type: 'GET',
-      dataType: 'html',
-      data: {}
-    })
-    .done(function() {
-      console.log("success");
-    })
-    .fail(function() {
-      console.log("error");
-    })
-    .always(function() {
-      console.log("complete");
-    });
+      $('.facebook').on('click', function(){
+        alert("This happens to be working!!")
+      });
 
-
-  });
-  
-  //***************************************************************//
-  //***************************************************************//
-
-  $('.sidenav').on('mouseover', function(){
-    // e.preventDefault()
-    $('.sidenav').addClass('open');
-
-  });
-
-  $('.sidenav').on('mouseout', function(){
-    $('.sidenav').removeClass('open');
-  });
-
-  //These are the navigation links
-  /******
-    render content on click on the home page
-    Using ajax calls to get data from the database
-  */
-
-  $('.user-icon').on('click', function(event){
-    alert("This is also working !!!")
-    event.preventDefault()
-
-    $.ajax({
-      url: $(this).attr('href'),
-      method: 'GET',
-      data: {},
-      dataType: 'html'
-    }).done(function(responseData){
-      // 4. take the response from the server and render it on console
-      console.log(responseData);
-    })
-  });
-
-  $('.google-plus').on('click', function(event){
-     alert("This is working!!")
-     event.preventDefault()
-
-     $.ajax({
-       url: $(this).attr('href'),
-       method: 'GET',
-       data: {},
-       dataType: 'html'
-     }).done(function(responseData){
-       console.log(responseData);
-     })
-  });
-
-  $('.youtube').on('click', function(){
-    alert("This can also be working hey!!!")
-  });
-
-  $('.twitter').on('click', function(){
-    alert("This happens to be working!!")
-  });
-
-  $('.facebook').on('click', function(){
-    alert("This happens to be working!!")
-  });
-
-  $('.instagram').on('click', function(){
-    alert("This happens to be working!!")
-  });
+      $('.instagram').on('click', function(){
+        alert("This happens to be working!!")
+      });
 
 });
