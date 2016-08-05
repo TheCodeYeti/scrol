@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include AuthHelper
 
-  # before_action :require_login
+  before_action :require_login
 
   def home
     # Display the login link.

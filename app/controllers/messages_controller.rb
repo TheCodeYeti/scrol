@@ -16,6 +16,7 @@ class MessagesController < ApplicationController
     user.authentications.each do |authentication|
 
       access_token = authentication.oauth_token
+      access_token_secret = authentication.oauth_secret
 
       case authentication.provider
       when 'google'
@@ -25,7 +26,7 @@ class MessagesController < ApplicationController
         saveGitHubMessages(user, access_token)
 
       when 'twitter'
-        saveTwitterMessages(user, access_token)
+        saveTwitterMessages(user, access_token, access_token_secret)
       end
 
     end
@@ -117,14 +118,14 @@ class MessagesController < ApplicationController
       if not Message.exists?(message_id: msg.id)
 
         message = Message.new()
-        message.snippet = msg.subject.type + ' ' + msg.repository.owner.login + ' ' + msg.repository.name + ' ' + msg.subject.title
+        message.snippet = "#{msg.subject.type} #{msg.repository.owner.login} #{msg.repository.name} #{msg.subject.title}"
         message.url = msg.repository.html_url
         message.message_type = 'text'
         message.body = msg
         message.source = 'github'
         message.message_id = msg.id
         message.timestamp = msg.updated_at
-        message.title = msg.subject.type + ' ' +  msg.repository.owner.login + ' ' + msg.repository.name
+        message.title = "#{msg.subject.type} #{msg.repository.owner.login} #{msg.repository.name}"
         message.user = user
 
         message.save
@@ -135,7 +136,42 @@ class MessagesController < ApplicationController
 
   end
 
-  def saveTwitterMessages(user, access_token)
+  def saveTwitterMessages(user, access_token, access_token_secret)
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key = ENV['TWITTER_CONSUMER_KEY']
+      config.consumer_secret = ENV['TWITTER_CONSUMER_SECRET']
+      config.access_token = access_token
+      config.access_token_secret = access_token_secret
+    end
+
+    tweets = client.home_timeline
+
+    tweets.each do |tweet|
+
+      if not Message.exists?(message_id: tweet.id)
+
+        message = Message.new()
+        message.snippet = tweet.text
+        message.url = tweet.url.to_s
+        message.message_type = 'text'
+        message.body = tweet
+        message.source = 'twitter'
+        message.message_id = tweet.id
+        message.timestamp = tweet.created_at
+        message.title = tweet.user.name
+        message.user = user
+
+        message.save
+
+      end
+
+    end
+
+    # @tweets = client.search("raptors", result_type: "recent").take(7).collect do |tweet|
+    #   " #{tweet.user.screen_name}:
+    #   #{tweet.text}
+    #   #{tweet.media }"
+    # end
 
   end
 
