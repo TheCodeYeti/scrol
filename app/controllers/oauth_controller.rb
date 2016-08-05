@@ -97,7 +97,7 @@ class OauthController < ApplicationController
 
     end
 
-end
+  end
 
 
   private
@@ -193,18 +193,17 @@ end
         if not Message.exists?(message_id: msg.id)
 
           message = Message.new()
-          message.snippet = msg.subject.type + ' ' + msg.repository.owner.login + ' ' + msg.repository.name + ' ' + msg.subject.title
+          message.snippet = "#{msg.subject.type} #{msg.repository.owner.login} #{msg.repository.name} #{msg.subject.title}"
           message.url = msg.repository.html_url
           message.message_type = 'text'
           message.body = msg
           message.source = 'github'
           message.message_id = msg.id
           message.timestamp = msg.updated_at
-          message.title = msg.subject.type + ' ' +  msg.repository.owner.login + ' ' + msg.repository.name
-
+          message.title = "#{msg.subject.type} #{msg.repository.owner.login} #{msg.repository.name}"
           message.save
 
-          @messages<<message
+          @messages << message
 
         end
 
