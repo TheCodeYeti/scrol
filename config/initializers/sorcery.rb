@@ -126,6 +126,7 @@ Rails.application.config.sorcery.configure do |config|
   config.github.key = ENV['GITHUB_CLIENT_ID']
   config.github.secret = ENV['GITHUB_CLIENT_SECRET']
   config.github.callback_url = "#{ENV['ROOT_URL']}/oauth/callback?provider=github"
+  config.github.scope = 'notifications'
   config.github.user_info_mapping = {:email => "email"}
   #
   config.google.key = ENV['GOOGLE_API_CLIENT_ID']

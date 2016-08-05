@@ -56,8 +56,6 @@ gem 'oauth2' #to remove
 # Simple Password Authentication and OAuth
 gem 'sorcery' #, path: '../sorcery' # this is for debugging
 
-# store all keys in application.yml and use a nifty ENV variable to access
-gem "figaro"
 
 # 3 legged Oauth
 # gem 'oauth2'
@@ -70,8 +68,8 @@ group :development, :test do
 
   gem 'pry-byebug'
 
-end
 
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -79,6 +77,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # store all keys in application.yml and use a nifty ENV variable to access
+  gem "figaro"
+
 end
 
 group :production do
