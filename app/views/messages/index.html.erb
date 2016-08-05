@@ -3,11 +3,9 @@
 <div class="msg-container">
     <% @messages.each { |msg| %>
       <div class="message-item <%=msg.source%>">
-        <h1> <%=msg.title%></h1>
-        <p>
-          <%= msg.snippet %> <br>
-          <%= msg.timestamp %> <!--apply .strf() method later -->
-        </p>
+        <h1 class="message-title"> <%=msg.title%></h1>
+        <p><%= msg.snippet %></p>
+        <p> <%= msg.timestamp %></p>
         <a href="<%=msg.url%>">Visit Link</a>
       </div>
     <% } %>
