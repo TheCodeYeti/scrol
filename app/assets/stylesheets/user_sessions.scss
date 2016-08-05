@@ -45,17 +45,18 @@ img {
 
 /*  LOGIN FORM   ===================================================================== */
 .login-form {
-  position:relative;
+  position:absolute;
+  z-index: 12;
   left: 45px;
   background: #2f4858;
   padding: 40px;
   max-width: 600px;
-  margin: 40px auto;
+  margin: 150px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   list-style: none;
   box-sizing: border-box;
-  display: block;
+  display: none;
   overflow: hidden;
 
 }
