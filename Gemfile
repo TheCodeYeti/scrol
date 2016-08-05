@@ -21,7 +21,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'twitter'
 #see https://dev.twitter.com/api #reademe doc to install twitter from github
 
+gem 'instagram'
 
+gem 'bundler'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
