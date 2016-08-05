@@ -2,6 +2,7 @@ class MessagesController < ApplicationController
   require 'google/api_client'
 
   def index
+    @messages = current_user.messages
   end
 
   def show
