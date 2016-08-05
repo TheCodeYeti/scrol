@@ -18,15 +18,22 @@ $(function() {
 
 
       $('.login_form_reload').on('click', function() {
-
         $('.login-form').css('display', 'block')
-        $('.login-form').css('transition', '1s')
       });
+
+      $('.login-form').on('click', function(event){
+        event.stopPropagation()
+        
+      })
 
       // This is an event handler to stop event propagation
       // To close window onclick on other parts besides the field
 
-      $('.').on('click', function(){})
+      // $('.signup_form_reload').on('click', function(){
+      //   $('.signup-form').css('display', 'block')
+      // })
+
+
 
 
       $('.sidenav').on('mouseover', function(){

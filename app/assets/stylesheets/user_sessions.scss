@@ -43,6 +43,12 @@ img {
   background-color: rgba(170, 244, 241, 0.73);
 }
 
+.close{
+  display: none;
+  transition: 1s;
+}
+
+
 /*  LOGIN FORM   ===================================================================== */
 .login-form {
   position:absolute;
@@ -51,7 +57,7 @@ img {
   background: #2f4858;
   padding: 40px;
   max-width: 600px;
-  margin: 150px auto;
+  margin: 120px 200px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   list-style: none;
