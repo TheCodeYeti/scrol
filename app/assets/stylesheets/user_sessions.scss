@@ -4,38 +4,57 @@
   box-sizing: border-box;
 }
 
-/*  HERO IMG   ======================================================================== */
-img {
-  max-width:100%;
-  overflow: hidden;
+a{
+  text-decoration: none;
 }
+
+/*  HERO IMG   ======================================================================== */
+
 .hero-banner {
   position: relative;
-  /*background: url(assets/hero-img.jpg) no-repeat center center fixed;*/
+  background-image: url(landing-pg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 520px;
   overflow: hidden;
+  margin-bottom: 80px;
 }
 
+.hero-img{
+  width:100%;
+  overflow: hidden;
+}
+.logo-banner{
+  position: absolute;
+  height: 220px;
+  width: auto;
+  bottom: 50%;
+  left: 40%;
+  z-index: 5;
+  opacity: 0.6;
+
+}
 /*  BUTTON   ============================================================================= */
 
 .signup-btn,
 .login-btn {
-  font-size: 1.5em;
+  text-decoration: none;
+  font-size: 1.2em;
   display: block;
-  padding: 10px 20px;
+  padding: 10px 30px;
   background-color: rgba(255, 255, 255, 0.33);
   border-radius: 8px;
   border: 2px solid #DFE7ED;
   position: absolute;
-  z-index: 10;
-  top: 60%;
-  left: 35%;
+  z-index: 5;
+  top: 62%;
+  left: 40%;
   color: #fff;
 }
 
 .signup-btn {
-  margin-left: 130px;
+  margin-left: 180px;
 }
 
 .signup-btn:hover,
@@ -43,7 +62,61 @@ img {
   background-color: rgba(170, 244, 241, 0.73);
 }
 
+/*  MAIN BODY ===================================================================== */
+.info{
+  text-align: center;
+}
+
+.info h3 {
+  color: #33867E;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  margin: 20px, 0;
+}
+
+.icon-list{
+  list-style: none;
+  color: #7a7d7d;
+}
+
+.icon-list li {
+  display: inline-block;
+}
+
+.icon-list i {
+  color: #7A7D7D;
+  font-size: 2.6em;
+  padding-right: 20px;
+}
+
 /*  LOGIN FORM   ===================================================================== */
+.modal-login {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.8);
+}
+.close {
+    display: block;
+    border: none;
+    outline: none;
+    width: 1em;
+    height: 1em;
+    font: 1.5em Arial;
+    background-color: #bc2a39;
+    color: #e7c0b9;
+    border-radius: 0.5em;
+    line-height: 0;
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em;
+}
+
 .login-form {
   position:relative;
   left: 45px;

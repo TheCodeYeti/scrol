@@ -1,5 +1,16 @@
 <div class="hero-banner">
-  <img src="assets/hero-img.jpg" alt="banner" />
-  <button type="button" name="sign-up" class="signup-btn">Sign-Up</button>
-  <button type="button" name="login" class="login-btn">Login</button>
+  <!-- <img src="assets/landing-pg.jpg" alt="banner" class="hero-img" /> -->
+  <img src="assets/scrol.png" alt="logo" class="logo-banner"/>
+  <%= link_to "Sign Up", new_user_path, method:'get', class: "signup-btn" %>
+  <%= link_to "Login", new_user_session_path, method:'get', class: "login-btn" %>
 </div>
+
+<section class="info">
+  <h3>Connect and Scrol</h3>
+  <ul class="icon-list">
+    <li><i class="fa fa-google-plus"></i></li>
+    <li><i class="fa fa-github"></i></li>
+    <li><i class="fa fa-twitter"></i></li>
+    <li><i class="fa fa-envelope"></i></li>
+  </ul>
+</section>
