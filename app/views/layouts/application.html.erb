@@ -12,11 +12,6 @@
 
   </head>
   <body>
-
-    <%= render 'user_sessions/form' %>
-  
-
-
     <div class="wrapper">
     <nav class= "top-nav">
       <%= image_tag("#{ENV['ROOT_URL']}/assets/scrol-col.png", alt: "logo", class: "logo-nav") %>
@@ -31,7 +26,7 @@
         <% else %>
 
           <li><%= link_to 'Register', new_user_path %></li>
-          <li><%= link_to 'Login', '#', class: 'login_form_reload' %></li>
+          <li><%= link_to 'Login', :login %></li>
 
         <% end %>
 
@@ -59,10 +54,12 @@
 
     <main class="main-content">
         <%= yield %>
-        <%= current_user.inspect %>
+      
     </main>
 
   </body>
 </div>
   <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+
 </html>
