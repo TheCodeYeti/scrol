@@ -98,6 +98,7 @@ a:hover {
   color: #ffffff;
 }
 
+
 .logo-nav{
   height: 35px;
   width: auto;
@@ -117,19 +118,21 @@ a:hover {
 
 .nav-ul li {
   display: inline-block;
-
 }
 
 .nav-ul li a {
   color: #272B37;
   text-decoration: none;
-
+  padding: 0 10px;
   border-right: solid 1px #272B37;
 }
 
 .nav-ul li:last-child a {
   border-right: 0;
+
 }
+
+
 
 .sidenav {
    height: 100%;
@@ -196,26 +199,6 @@ a:hover {
   border:0;
 }
 
-.user-icon:before{
-  content: "\f007";
-}
-
-.gmail:before{
-  content: "\f0d5";
-}
-
-
-.twitter:before{
-  content: "\f099";
-}
-
-.github:before{
-  content: "\f09b";
-}
-
-.outlook:before{
-  content: "\f199";
-}
 
 .open {
   width: 20em;

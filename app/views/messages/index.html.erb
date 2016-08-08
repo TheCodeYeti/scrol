@@ -25,7 +25,7 @@
   <div class="msg-container">
     <% @messages.each { |msg| %>
       <div class="message-item">
-        <div class="info-top <%=msg.source%>-item">
+        <div class="info-top <%=msg.source%>">
           <%if msg.source == 'gmail'%>
             <i class= "fa fa-google-plus"></i>
             <p>Gmail</p>
@@ -44,8 +44,8 @@
         <div class="message-article">
           <h1 class="message-title"> <%=msg.title%></h1>
           <p><%= msg.snippet %></p>
-          <p> <%= msg.timestamp %></p>
           <a href="<%=msg.url%>">Visit Link</a>
+          <p class="time">Published:  <%= msg.timestamp.strftime("%b %e, %Y | %l:%M %p") %></p>
         </div>
       </div>
     <% } %>
