@@ -14,6 +14,13 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.find(params[:id])
+
+    render_to do |format|
+
+      format.html { render :show }
+      format.json { render json: @message }
+
+    end
   end
 
 
