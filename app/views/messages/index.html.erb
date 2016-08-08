@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Messages</h1>
+<h1 class="pg-title">Your Messages</h1>
 <!-- <#% binding.pry %> -->
 <% if @messages.empty? == true%>
 <div class="section group">
@@ -45,7 +45,7 @@
           <h1 class="message-title"> <%=msg.title%></h1>
           <p><%= msg.snippet %></p>
           <a href="<%=msg.url%>">Visit Link</a>
-          <p class="time">Published:  <%= msg.timestamp.strftime("%b %e, %Y | %l:%M %p") %></p>
+          <p class="time">Published:  <%= msg.try(:timestamp).try(:strftime, ("%b %e, %Y | %l:%M %p")) %></p>
         </div>
       </div>
     <% } %>
