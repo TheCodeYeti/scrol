@@ -14,7 +14,7 @@
   <body>
     <div class="wrapper">
     <nav class= "top-nav">
-      <img src="assets/images/scrol.png" alt="logo" class="logo-nav" />
+      <%= image_tag("#{ENV['ROOT_URL']}/assets/scrol-col.png", alt: "logo", class: "logo-nav") %>
       <ul class= "nav-ul">
         <% if current_user %>
           <li>
