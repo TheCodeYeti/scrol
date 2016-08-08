@@ -12,10 +12,21 @@ class ApplicationController < ActionController::Base
     render html: "<a href='#{login_url}'>Log in and view my email</a>".html_safe
   end
 
+  def current_user
+    return unless session[:user_id]
+    @user ||= User.find(session[:user_id])
+  end
 
   private
   def not_authenticated
     redirect_to login_path, alert: 'Please login first'
+  end
+
+  def require_login
+    unless logged_in?
+      flash[:error] = 'You are not logged in'
+      redirect_to :login
+    end
   end
 
 end
