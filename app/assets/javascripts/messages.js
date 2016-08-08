@@ -9,7 +9,7 @@
            url: 'messages/import/1',
            type: 'GET',
            dataType: 'html',
-           data: { params: 'refresh' }
+           data: { }
          })
          .done(function(data) {
            console.log( 200, { "Content-Type": "text/html" }, data );
@@ -24,7 +24,8 @@
    });
 
 
-   ('fa-google-plus').on('click', function(e){
+
+   $('fa-google-plus').on('click', function(e){
      e.preventDefault();
      if ($('gmail-item').hasClass('on')){
        $('gmail-item').removeClass('on');
@@ -34,5 +35,5 @@
        $('gmail-item').fadeIn(200).addClass('on')
 
      }
-   })
+   });
  });
