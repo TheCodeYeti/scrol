@@ -3,11 +3,13 @@ class MessagesController < ApplicationController
 
   def index
     @messages = current_user.messages
+    @messages.order(timestamp: :desc)
   end
 
   def show
-    @message = messages.find(params[:id])
+
   end
+
 
   def import
 
