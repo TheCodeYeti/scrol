@@ -1,5 +1,5 @@
 $(function(){
-  ('fa-google-plus').on('click', function(e){
+  $('fa-google-plus').on('click', function(e){
     e.preventDefault();
     if ($('gmail-item').hasClass('on')){
       $('gmail-item').removeClass('on');
