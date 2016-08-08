@@ -7,6 +7,7 @@
   column-gap: 1.5em;
   -webkit-column-gap: 1.5em;
   font-size: 0.85em;
+  overflow: hidden;
 }
 .message-title{
   line-height: 1.4em;
@@ -14,30 +15,48 @@
 }
 
 .message-item{
-  display: inline-block;
   margin: 0 0 1.5em;
   width: 100%;
-  border-radius: 1.7em;
+  border-radius: 1em;
   box-sizing: border-box;
-  padding: 1.5em 2.5em;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+.info-top{
+  height: 26px;
 }
 
+.message-article{
+  padding: 1.5em 2.5em;
+}
 .message-item a:hover {
   text-decoration: underline;
 }
 
-.gmail {
+.off{
+  display:none;
+}
+
+.on{
+  display: inline-block;
+}
+
+.gmail-item {
   background-color: #fc6636;
 }
 
-.twitter {
+.twitter-item {
   background-color: #6fb3fa;
 }
 
-.outlook {
+.outlook-item {
   background-color: #7ba3c1;
 }
+
+.github-item {
+  background-color: #058356;
+}
+
 
 @media only screen and (min-width: 400px) {
   .msg-container {
