@@ -1,6 +1,10 @@
+
 <div class="container">
 <h1>Messages</h1>
 <!-- <#% binding.pry %> -->
+
+<%= link_to 'Refresh', import_messages_path(current_user), class: 'refreshBtn' %>
+
 <% if @messages.empty? == true%>
 <div class="section group">
   <div class="span_1_of_4 gmail-item col">
