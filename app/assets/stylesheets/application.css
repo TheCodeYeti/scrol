@@ -17,7 +17,7 @@
  *, *:before, *:after {
    box-sizing: border-box;
  }
-
+@import url("stackicons.css");
 /*@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");*/
 
 body{
@@ -199,24 +199,21 @@ a:hover {
   content: "\f007";
 }
 
-.google-plus:before{
+.gmail:before{
   content: "\f0d5";
 }
 
-.youtube:before{
-  content: "\f16a";
-}
 
 .twitter:before{
   content: "\f099";
 }
 
-.facebook:before{
-  content: "\f09a";
+.github:before{
+  content: "\f09b";
 }
 
-.instagram:before{
-  content: "\f16d";
+.outlook:before{
+  content: "\f199";
 }
 
 .open {
