@@ -1,3 +1,87 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.msg-container{
+  margin: 1.5em 0;
+  padding: 0;
+  column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  font-size: 0.85em;
+  overflow: hidden;
+}
+.message-title{
+  line-height: 1.4em;
+  font-size: 2em;
+}
+
+.message-item{
+  margin: 0 0 1.5em;
+  width: 100%;
+  border-radius: 1em;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+.info-top{
+  height: 26px;
+}
+
+.message-article{
+  padding: 1.5em 2.5em;
+}
+.message-item a:hover {
+  text-decoration: underline;
+}
+
+.off{
+  display:none;
+}
+
+.on{
+  display: inline-block;
+}
+
+.gmail-item {
+  background-color: #fc6636;
+}
+
+.twitter-item {
+  background-color: #6fb3fa;
+}
+
+.outlook-item {
+  background-color: #7ba3c1;
+}
+
+.github-item {
+  background-color: #058356;
+}
+
+
+@media only screen and (min-width: 400px) {
+  .msg-container {
+    column-count: 1;
+    -webkit-column-count: 1;
+  }
+}
+@media only screen and (min-width: 700px){
+  .msg-container {
+    column-count: 1;
+    -webkit-column-count: 1;
+  }
+}
+
+@media only screen and (min-width:900px){
+  .msg-container {
+    column-count: 2;
+    -webkit-column-count: 2;
+  }
+}
+
+@media only screen and (min-width:1100px){
+  .msg-container {
+
+    column-count: 3;
+    -webkit-column-count: 3;
+  }
+}

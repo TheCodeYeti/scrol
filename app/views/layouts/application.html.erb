@@ -32,7 +32,10 @@
 
       </ul>
 
+
     </nav>
+
+    
 
     <div class="notifications">
 
@@ -43,23 +46,31 @@
     <% if current_user %> <!-- Shari: if statement makes the side nav only show up if user is logged in-->
     <div class= "nav-wrapper">
       <ul class= "sidenav">
-        <li title="user-icon"><a class="fa fa-user" aria-hidden="true" href="#">User</a></li>
+        <li title="user-icon"><a class="fa fa-user" aria-hidden="true" href="<%=users_path(@user)%>"><%= @user.email %></a></li>
         <li title="gmail-icon"><a class="fa fa-google-plus" aria-hidden="true" href="#">Gmail</a></li>
-        <li title="github-icon"><a class="fa fa-github" aria-hidden="true" href="github_results_git_path">Github</a></li>
-        <li title="twitter-icon"><a class="fa fa-twitter" aria-hidden="true" href="twitter_index_path">Twitter</a></li>
-        <li title="outlook-icon"><a class="fa fa-envelope" aria-hidden="true" href="mail_index_path">Outlook</a></li>
+        <li title="github-icon"><a class="fa fa-github" aria-hidden="true" href="<%= github_results_git_path%>">Github</a></li>
+        <li title="twitter-icon"><a class="fa fa-twitter" aria-hidden="true" href="<%= twitter_index_path%>">Twitter</a></li>
+        <li title="outlook-icon"><a class="fa fa-envelope" aria-hidden="true" href="<%= mail_index_path%>">Outlook</a></li>
       </ul>
     </div>
     <%end%>
 
     <main class="main-content">
         <%= yield %>
+<<<<<<< HEAD
       
+=======
+        <%#= current_user.inspect %>
+>>>>>>> 8150fc5e22c02f70e4d34c5ca65b149dacdfd067
     </main>
 
   </body>
 </div>
+<<<<<<< HEAD
   <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
+=======
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+>>>>>>> 8150fc5e22c02f70e4d34c5ca65b149dacdfd067
 
 </html>

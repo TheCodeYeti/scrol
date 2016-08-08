@@ -6,27 +6,29 @@ class UserSessionsController < ApplicationController
   skip_before_action :require_login, except: [:destroy]
   #Shari: added index for landing page
   def index
-    if current_user != nil
-      redirect_back_or_to(user_path(@user))
-    end
+    # if current_user != nil
+    #   redirect_back_or_to(user_path(@user))
+    # end
     # @user= User.new
   end
 
   def new
     #Shari: if statement to redirect signed in users from logging in
-    if current_user != nil
+    if current_user
       redirect_back_or_to(user_path(@user), alert: 'Already Logged In')
+    else
+      @user = User.new
     end
-    @user = User.new
   end
 
   def create
     #Shari: changed redirect to user's profile page instead of user index
     if @user = login(params[:email], params[:password])
+      session[:user_id] = @user.id
       redirect_back_or_to(user_path(@user), notice: 'Login successful')
     else
       flash.now[:alert] = 'Login failed'
-      render action: 'new'
+      render 'new'
     end
   end
 
