@@ -49,20 +49,42 @@ a:hover {
   content: " ";
   display: grid;
 }
-/*  GRID OF THREE   ========================================================== */
+/*  GRID OF FOUR   ============================================================================= */
 
-.span_3_3 {
+
+.span_4_of_4 {
 	width: 100%;
 }
 
-.span_2_3 {
-	width: 66.13%;
+.span_3_of_4 {
+	width: 74.6%;
 }
 
-.span_1_3 {
-	width: 32.26%;
+.span_2_of_4 {
+	width: 49.2%;
 }
 
+.span_1_of_4 {
+	width: 23.8%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_4_of_4 {
+		width: 100%;
+	}
+	.span_3_of_4 {
+		width: 100%;
+	}
+	.span_2_of_4 {
+		width: 100%;
+	}
+	.span_1_of_4 {
+		width: 100%;
+	}
+}
 /*  NAVIGATION   =========================================================== */
 
 .top-nav {
@@ -257,6 +279,8 @@ a:hover {
 	display: block;
 	float:left;
 	margin: 1% 0 1% 1.6%;
+  padding: 0px 30px 10px 30px;
+  border-radius: 1em;
 }
 
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */

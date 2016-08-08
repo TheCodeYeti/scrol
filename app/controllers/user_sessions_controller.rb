@@ -6,9 +6,9 @@ class UserSessionsController < ApplicationController
   skip_before_action :require_login, except: [:destroy]
   #Shari: added index for landing page
   def index
-    if current_user != nil
-      redirect_back_or_to(user_path(@user))
-    end
+    # if current_user != nil
+    #   redirect_back_or_to(user_path(@user))
+    # end
     # @user= User.new
   end
 

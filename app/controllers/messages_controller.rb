@@ -2,12 +2,14 @@ class MessagesController < ApplicationController
   require 'google/api_client'
 
   def index
-    @messages = current_user.messages
+
   end
 
   def show
-    @message = messages.find(params[:id])
+    @messages = current_user.messages
+    @messages.order(timestamp: :desc)
   end
+
 
   def import
 
