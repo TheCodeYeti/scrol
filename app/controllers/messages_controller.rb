@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   def index
     @messages = current_user.messages.order(timestamp: :desc)
 
-    render_to do |format|
+    respond_to do |format|
 
       format.html { render :index }
       format.json { render json: @messages }
@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
   def show
     @message = Message.find(params[:id])
 
-    render_to do |format|
+    respond_to do |format|
 
       format.html { render :show }
       format.json { render json: @message }
