@@ -20,15 +20,15 @@ $(function(){
     }
 
   });
-  
+
   $('.refreshBtn').on('click', function(event){
     event.preventDefault()
 
     $.ajax({
-      url: 'messages/import/1',
+      url: 'messages',
       type: 'GET',
       dataType: 'html',
-      data: { params: 'refresh' }
+      data: {  }
     })
     .done(function(data) {
       console.log( 200, { "Content-Type": "text/html" }, data );

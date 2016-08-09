@@ -35,8 +35,8 @@ class MessagesController < ApplicationController
       access_token_secret = authentication.oauth_secret
 
       case authentication.provider
-      when 'google'
-        saveGmailMessages(user, access_token)
+      # when 'google'
+      #   saveGmailMessages(user, access_token)
 
       when 'github'
         saveGitHubMessages(user, access_token)
@@ -47,42 +47,55 @@ class MessagesController < ApplicationController
 
     end
 
-    render :index
+    redirect_to :messages
   end
 
   private
 
   def saveGmailMessages(user, access_token)
-
+    # binding.pry
     google_api_client = Google::APIClient.new({
       application_name: 'Scrol'
     })
 
+    # binding.pry
     google_api_client.authorization = Signet::OAuth2::Client.new({
-      client_id: ENV['GOOGLE_API_CLIENT_ID'],
-      client_secret: ENV['GOOGLE_API_CLIENT_SECRET'],
+      client_id: Rails.application.secrets.GOOGLE_API_CLIENT_ID,
+      client_secret: Rails.application.secrets.GOOGLE_API_CLIENT_SECRET,
       access_token: access_token
     })
 
+    # binding.pry
     gmail_api = google_api_client.discovered_api('gmail', 'v1')
 
+    # binding.pry
     results = google_api_client.execute!(
       api_method: gmail_api.users.threads.list,
       parameters: {userId: "me", is: "unread", includeSpamTrash: false}
     )
 
+    # binding.pry
     results.data.threads.each do |thread|
 
       # check if the thread has already been saved
       if not Message.exists?(message_id: thread.id)
+        binding.pry
 
         # if it has not been saved
         # get the message from gmail
+
+        google_api_client.authorization = Signet::OAuth2::Client.new({
+          client_id: Rails.application.secrets.GOOGLE_API_CLIENT_ID,
+          client_secret: Rails.application.secrets.GOOGLE_API_CLIENT_SECRET,
+          access_token: access_token
+        })
+
         msg = google_api_client.execute!(
               api_method: gmail_api.users.messages.get,
               parameters: {userId: 'me', id: thread.id}
             )
 
+        binding.pry
         # save it
         message = Message.new()
         message.snippet = msg.data.snippet
@@ -93,6 +106,7 @@ class MessagesController < ApplicationController
         message.message_id = msg.data.id
         message.user = user
 
+        binding.pry
         msg.data.payload.headers.each do |header|
 
           if header.name == 'X-Received'
@@ -118,8 +132,8 @@ class MessagesController < ApplicationController
   def saveGitHubMessages(user, access_token)
 
     client = Octokit::Client.new(
-      {client_id: ENV['GITHUB_CLIENT_ID'],
-      client_secret: ENV['GITHUB_CLIENT_SECRET']})
+      {client_id: Rails.application.secrets.GITHUB_CLIENT_ID,
+      client_secret: Rails.application.secrets.GITHUB_CLIENT_SECRET})
 
     client.check_application_authorization access_token
 

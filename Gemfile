@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Paul Added - Start
-gem 'google-api-client', '0.8.6'
+gem 'google-api-client', '0.8.6',  require: 'google/api_client'
 
 # for github
 gem "octokit", "~> 4.0"
