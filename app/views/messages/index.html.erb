@@ -1,38 +1,71 @@
 <div class="container">
-<h1>Messages</h1>
 <!-- <#% binding.pry %> -->
 <% if @messages.empty? == true%>
 <div class="section group">
-  <div class="span_1_of_4 gmail-item col">
-    <h3>Connect to Gmail</h3>
-    <%= link_to 'Connect', auth_at_provider_url('google') %>
-  </div>
-  <div class="span_1_of_4 twitter-item col">
-    <h3>Connect to Twitter</h3>
-    <%= link_to 'Connect', auth_at_provider_url('twitter') %>
-  </div>
-  <div class="span_1_of_4 github-item col">
-    <h3>Connect to Github</h3>
-    <%= link_to 'Connect', auth_at_provider_url('github') %>
-  </div>
-  <div class="span_1_of_4 outlook-item col">
-    <h3>Connect to Outlook</h3>
-    <%= link_to 'Connect', auth_at_provider_url('outlook') %>
-  </div>
-</div>
 
+  <!-- Gmail Connect -->
+  <div class="span_1_of_3 col message-item">
+    <div class="info-top gmail">
+      <i class= "fa fa-google-plus"></i>
+    </div>
+
+    <div class="message-article">
+      <p>Connect to Gmail</p>
+      <%= link_to 'Connect', auth_at_provider_url('google') %>
+    </div>
+  </div>
+
+  <!-- Twitter Connect -->
+  <div class="span_1_of_3 col message-item">
+
+    <div class="info-top twitter">
+      <i class= "fa fa-twitter"></i>
+    </div>
+
+    <div class="message-article">
+      <p>Connect to Twitter</p>
+      <%= link_to 'Connect', auth_at_provider_url('twitter') %>
+    </div>
+  </div>
+  <!-- Github Connect -->
+  <div class="span_1_of_3 col message-item">
+    <div class="info-top github">
+      <i class="fa fa-github"></i>
+    </div>
+    <div class="message-article">
+      <h3>Connect to Github</h3>
+      <%= link_to 'Connect', auth_at_provider_url('github') %>
+    </div>
+  </div>
+
+  </div>
+
+</div>
+<!-- END OF SECTION -->
 <%else%>
+
+
   <div class="msg-container">
     <% @messages.each { |msg| %>
-      <div class="message-item">
-        <div class="info-top <%=msg.source%>-item">
+      <div class="message-item on">
+        <div class="info-top <%=msg.source%>">
+          <%if msg.source == 'gmail'%>
+            <i class= "fa fa-google-plus"></i>
+            <p>Gmail</p>
+          <%elsif msg.source == 'twitter'%>
+            <i class="fa fa-twitter"></i>
+            <p>Twitter</p>
+          <%else%>
+            <i class="fa fa-github"></i>
+            <p>GitHub</p>
+          <%end%>
 
         </div>
         <div class="message-article">
           <h1 class="message-title"> <%=msg.title%></h1>
-          <p><%= msg.snippet %></p>
-          <p> <%= msg.timestamp %></p>
-          <a href="<%=msg.url%>">Visit Link</a>
+          <p class="snippet"><%= msg.snippet %></p>
+          <%= link_to "Visit Link", msg.url, target: '_blank'%>
+          <p class="time">Published:  <%= msg.try(:timestamp).try(:strftime, ("%b %e, %Y | %l:%M %p")) %></p>
         </div>
       </div>
     <% } %>

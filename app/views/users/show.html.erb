@@ -1,35 +1,24 @@
-<div class="container">
-  <div class="user-container">
+<div class="container center-content">
+  <div class="user-section">
     <p id="notice"><%= notice %></p>
-    <h3>Your Info</h3>
+    <h3 class="title">Your Info</h3>
+
+    <div class="avatar">
+      <%=image_tag("http://api.adorable.io/avatar/#{@user.name}", class:'avatar')%>
+    </div>
     <p>
       <strong>Email:</strong>
       <%= @user.email %>
     </p>
-
-
-    <h2>Connections</h2>
-
     <div class="connection">
-      <%= @user.authentications.each do |authentication| %>
-
-        <%= authentication.provider %>
-        <%= authentication.username %>
-        <%= authentication.oauth_token %>
-
-      <% end %>
-    </div>
-
-    <div class="connection">
-      <p>Google: <%= link_to 'Connect', auth_at_provider_url('google') %>  | Disconnect</p>
-      <p>Git: <%= link_to 'Connect', auth_at_provider_url('github') %> | Disconnect</p>
-      <p>Twitter: <%= link_to 'Connect', auth_at_provider_url('twitter') %> | Disconnect</p>
-      <p>Outlook: <%= link_to 'Connect', auth_at_provider_url('outlook') %> | Disconnect</p>
+      <p>Google: <%= link_to 'Connect', auth_at_provider_url('google') %></p>
+      <p>Git: <%= link_to 'Connect', auth_at_provider_url('github') %></p>
+      <p>Twitter: <%= link_to 'Connect', auth_at_provider_url('twitter') %></p>
     </div>
 
 
-    <%= link_to 'Edit', edit_user_path(@user) %> |
-    <%= link_to 'Back', users_path %>
+    <%= link_to 'Edit Info', edit_user_path(@user) %> |
+    <%= link_to 'View Messages', messages_path %>
 
   </div>
 </div>

@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   has_many :messages
   accepts_nested_attributes_for :authentications
 
+  def name
+    email.split('@')[0]
+  end
+
 end

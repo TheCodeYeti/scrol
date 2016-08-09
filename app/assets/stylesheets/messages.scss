@@ -1,17 +1,19 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.pg-title{
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  padding: 0 0 8px 0;
+  text-indent: 30px;
+}
 .msg-container{
-  margin: 1.5em 0;
-  padding: 0;
+  padding: 20px;
   column-gap: 1.5em;
   -webkit-column-gap: 1.5em;
   font-size: 0.85em;
   overflow: hidden;
-}
-.message-title{
-  line-height: 1.4em;
-  font-size: 2em;
 }
 
 .message-item{
@@ -20,43 +22,153 @@
   border-radius: 1em;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
+  display: inline-block;
   overflow: hidden;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  background-color: #fff;
+
+}
+.message-title{
+  line-height: 1.4em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  padding-top: 0;
 }
 .info-top{
-  height: 26px;
+  height: 30px;
+  width: 100%;
 }
-
+.info-top i{
+  font-size: 20px;
+  display: block;
+  float: left;
+  padding-left: 7%;
+  padding-top: 5px;
+  color: #fff;
+}
+.info-top p {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+  padding-left: 90px;
+  margin-top: 7px;
+  color: #fff;
+  text-transform: capitalize;;
+}
 .message-article{
   padding: 1.5em 2.5em;
 }
-.message-item a:hover {
-  text-decoration: underline;
+.snippet{
+  padding-bottom: 15px;
+}
+
+.time{
+  float: right;
+  display: inline;
+  padding: 0;
+  margin: 0;
 }
 
 .off{
-  display:none;
+  display: none;
 }
 
 .on{
   display: inline-block;
 }
 
-.gmail-item {
-  background-color: #fc6636;
+.gmail {
+  background-color: #f46f25;
+}
+.gmail:hover{
+  background-color: #db570c;
+}
+.twitter {
+  background-color: #60b2f6;
 }
 
-.twitter-item {
-  background-color: #6fb3fa;
+.twitter:hover{
+  background-color: #5194cb;
 }
 
-.outlook-item {
+.outlook {
   background-color: #7ba3c1;
 }
 
-.github-item {
+.outlook:hover {
+  background-color: #6587a1;
+}
+
+.github {
   background-color: #058356;
 }
 
+.github:hover {
+  background-color: #046f49;
+}
+
+.gmail ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(244, 111, 37, 0.07);
+  border: 1px solid #f46f25;
+  color: #f46f25;
+}
+
+.gmail ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(244, 111, 37, 1);
+  color: #fff;
+}
+
+.twitter ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(96, 178, 246, 0.07);
+  border: 1px solid #6fb3fa;
+  color: #6fb3fa;
+}
+
+.twitter ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(96, 178, 246, 1);
+  color: #fff;
+}
+
+.outlook ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(122, 162, 193, 0.07);
+  border: 1px solid #7ba3c1;
+  color: #7ba3c1;
+}
+
+.outlook ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(88, 135, 172, 1);
+  color: #fff;
+}
+
+.github ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(5, 131, 86, 0.07);
+  border: 1px solid #058356;
+  color: #058356;
+}
+
+.github ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(5, 131, 86, 1);
+  color: #fff;
+}
 
 @media only screen and (min-width: 400px) {
   .msg-container {
