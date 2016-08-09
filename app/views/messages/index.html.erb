@@ -2,25 +2,60 @@
 <!-- <#% binding.pry %> -->
 <% if @messages.empty? == true%>
 <div class="section group">
-  <div class="span_1_of_4 gmail-item col">
-    <h3>Connect to Gmail</h3>
-    <%= link_to 'Connect', auth_at_provider_url('google') %>
-  </div>
-  <div class="span_1_of_4 twitter-item col">
-    <h3>Connect to Twitter</h3>
-    <%= link_to 'Connect', auth_at_provider_url('twitter') %>
-  </div>
-  <div class="span_1_of_4 github-item col">
-    <h3>Connect to Github</h3>
-    <%= link_to 'Connect', auth_at_provider_url('github') %>
-  </div>
-  <div class="span_1_of_4 outlook-item col">
-    <h3>Connect to Outlook</h3>
-    <%= link_to 'Connect', auth_at_provider_url('outlook') %>
-  </div>
-</div>
 
+  <!-- Gmail Connect -->
+  <div class="span_1_of_4 col message-item">
+    <div class="info-top gmail">
+      <i class= "fa fa-google-plus"></i>
+    </div>
+
+    <div class="message-article">
+      <p>Connect to Gmail</p>
+      <%= link_to 'Connect', auth_at_provider_url('google') %>
+    </div>
+  </div>
+
+  <!-- Twitter Connect -->
+  <div class="span_1_of_4 col message-item">
+
+    <div class="info-top twitter">
+      <i class= "fa fa-twitter"></i>
+    </div>
+
+    <div class="message-article">
+      <p>Connect to Twitter</p>
+      <%= link_to 'Connect', auth_at_provider_url('twitter') %>
+    </div>
+  </div>
+  <!-- Github Connect -->
+  <div class="span_1_of_4 col message-item">
+    <div class="info-top github">
+      <i class="fa fa-github"></i>
+    </div>
+    <div class="message-article">
+      <h3>Connect to Github</h3>
+      <%= link_to 'Connect', auth_at_provider_url('github') %>
+    </div>
+  </div>
+
+  <!-- Outlook Connect -->
+  <div class="span_1_of_4 col message-item">
+
+    <div class="info-top outlook">
+      <i class="fa fa-envelope"></i>
+    </div>
+
+    <div class="message-article">
+      <h3>Connect to Outlook</h3>
+      <%= link_to 'Connect', auth_at_provider_url('outlook') %>
+    </div>
+  </div>
+
+</div>
+<!-- END OF SECTION -->
 <%else%>
+
+
   <div class="msg-container">
     <% @messages.each { |msg| %>
       <div class="message-item on">
