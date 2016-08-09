@@ -27,6 +27,8 @@
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
   box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  background-color: #fff;
+
 }
 .message-title{
   line-height: 1.4em;
@@ -58,12 +60,58 @@
 .message-article{
   padding: 1.5em 2.5em;
 }
-
-.message-item a {
-  display: inline;
+.snippet{
+  padding-bottom: 15px;
 }
-.message-item a:hover {
-  text-decoration: underline;
+.gmail ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  border: 1px solid #f46f25;
+}
+.gmail ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: #6fb3fa;
+  color: #fff;
+}
+
+.twitter ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  border: 1px solid #6fb3fa;
+}
+
+.twitter ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: #6fb3fa;
+  color: #fff;
+}
+
+.outlook ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  border: 1px solid #7ba3c1;
+}
+
+.outlook ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: #7ba3c1;
+  color: #fff;
+}
+
+.github ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  border: 1px solid #058356;
+}
+
+.github ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: #058356;
+  color: #fff;
 }
 
 .time{
@@ -75,7 +123,7 @@
 
 
 .off{
-  display:none;
+  display: none;
 }
 
 .on{

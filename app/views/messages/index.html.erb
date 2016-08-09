@@ -43,7 +43,7 @@
         </div>
         <div class="message-article">
           <h1 class="message-title"> <%=msg.title%></h1>
-          <p><%= msg.snippet %></p>
+          <p class="snippet"><%= msg.snippet %></p>
           <a href="<%=msg.url%>">Visit Link</a>
           <p class="time">Published:  <%= msg.try(:timestamp).try(:strftime, ("%b %e, %Y | %l:%M %p")) %></p>
         </div>
