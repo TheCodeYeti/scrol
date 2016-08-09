@@ -59,8 +59,8 @@ class MessagesController < ApplicationController
     })
 
     google_api_client.authorization = Signet::OAuth2::Client.new({
-      client_id: Figaro.env.GOOGLE_API_CLIENT_ID,
-      client_secret: Figaro.env.GOOGLE_API_CLIENT_SECRET,
+      client_id: ENV['GOOGLE_API_CLIENT_ID'],
+      client_secret: ENV['GOOGLE_API_CLIENT_SECRET'],
       access_token: access_token
     })
 
@@ -118,8 +118,8 @@ class MessagesController < ApplicationController
   def saveGitHubMessages(user, access_token)
 
     client = Octokit::Client.new(
-      {client_id: Figaro.env.GITHUB_CLIENT_ID,
-      client_secret: Figaro.env.GITHUB_CLIENT_SECRET})
+      {client_id: ENV['GITHUB_CLIENT_ID'],
+      client_secret: ENV['GITHUB_CLIENT_SECRET']})
 
     client.check_application_authorization access_token
 
