@@ -7,7 +7,22 @@
 a{
   text-decoration: none;
 }
-
+.back-btn{
+  position:relative;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #55abb0;
+  background-color: rgba(97, 198, 179, 0.3);
+  left: 2%;
+  padding: 10px 20px;
+  border-radius: 0.5em;
+  border: 1px solid #61c5b3;
+}
+.back-btn:hover{
+  background-color: #55abb0;
+  color: #fff;
+}
 /*  HERO IMG   ======================================================================== */
 
 .hero-banner {

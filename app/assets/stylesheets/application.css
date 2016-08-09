@@ -87,7 +87,7 @@ a:hover {
 /*  NAVIGATION   =========================================================== */
 
 .top-nav {
-  height: 50px;
+  height: 55px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -105,11 +105,12 @@ a:hover {
 .nav-ul {
   list-style: none;
   float: right;
-  padding-right: 25px;
+  padding-right: 40px;
 }
 
 .nav-ul li {
   display: inline-block;
+  line-height: 25px;
 }
 
 .nav-ul li a {
@@ -133,7 +134,7 @@ a:hover {
    left: 0;
    background: #495469;
    z-index: 1000;
-   width: 55px;
+   width: 58px;
    position: fixed;
    overflow: hidden;
    display: block;
@@ -143,16 +144,16 @@ a:hover {
    transition: width ease .5s;
  }
  .branding {
-   height: 50px;
+   height: 55px;
    margin-top: 0;
-   background-color: #61c5b3
+   background-color: #61c5b3;
  }
  .logo-nav{
-   height: 35px;
+   height: 42px;
    width: auto;
    float: left;
-   margin-left: 4px;
-   margin-top: 8px;
+   margin-left: 1px;
+   margin-top: 6px;
  }
 .branding ~ li {
    padding-left: 12px;
@@ -160,15 +161,17 @@ a:hover {
  }
 
 .sidenav li a {
-   display: block;
-   height: 5em;
-   width: 5em;
-   text-indent: 10em;
-   line-height: 5em;
-   color: #ffffff;
-   /*background-color: #272B37;*/
-   position: relative;
-   transition: background 0.1s ease-in-out;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  display: block;
+  height: 5em;
+  width: 5em;
+  text-indent: 4.5em;
+  line-height: 5em;
+  color: #ffffff;
+  position: relative;
+  left: 4px;
+  transition: background 0.1s ease-in-out;
  }
 
 .sidenav li a:before {
@@ -185,7 +188,7 @@ a:hover {
   background-color: #59b8b2;
 }
 .branding ~ li:hover {
-  background-color: #485668;
+  background-color: #576581;
 }
 
 .sidenav li a {
@@ -202,15 +205,65 @@ a:hover {
   font-weight:700;
 }
 
+.gmail ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(244, 111, 37, 0.1);
+  border: 1px solid #f46f25;
+}
+.gmail ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(244, 111, 37, 1);
+  color: #fff;
+}
 
+.twitter ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(96, 178, 246, 0.1);
+  border: 1px solid #6fb3fa;
+}
+
+.twitter ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(96, 178, 246, 1);
+  color: #fff;
+}
+
+.outlook ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(122, 162, 193, 0.1);
+  border: 1px solid #7ba3c1;
+}
+
+.outlook ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(88, 135, 172, 1);
+  color: #fff;
+}
+
+.github ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(5, 131, 86, 0.1);
+  border: 1px solid #058356;
+}
+
+.github ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(5, 131, 86, 1);
+  color: #fff;
+}
 .open {
   width: 11em;
   height: 100%;
 }
 
-.logo-nav.open {
-  margin-left: 8px;
-}
 /* NOTIFICATIONS  ============================================================================= */
 
 .notifications {

@@ -63,56 +63,6 @@
 .snippet{
   padding-bottom: 15px;
 }
-.gmail ~ .message-article a {
-  display: inline;
-  padding: 5px;
-  border-radius: 0.5em;
-  border: 1px solid #f46f25;
-}
-.gmail ~ .message-article a:hover {
-  text-decoration: none;
-  background-color: #6fb3fa;
-  color: #fff;
-}
-
-.twitter ~ .message-article a {
-  display: inline;
-  padding: 5px;
-  border-radius: 0.5em;
-  border: 1px solid #6fb3fa;
-}
-
-.twitter ~ .message-article a:hover {
-  text-decoration: none;
-  background-color: #6fb3fa;
-  color: #fff;
-}
-
-.outlook ~ .message-article a {
-  display: inline;
-  padding: 5px;
-  border-radius: 0.5em;
-  border: 1px solid #7ba3c1;
-}
-
-.outlook ~ .message-article a:hover {
-  text-decoration: none;
-  background-color: #7ba3c1;
-  color: #fff;
-}
-
-.github ~ .message-article a {
-  display: inline;
-  padding: 5px;
-  border-radius: 0.5em;
-  border: 1px solid #058356;
-}
-
-.github ~ .message-article a:hover {
-  text-decoration: none;
-  background-color: #058356;
-  color: #fff;
-}
 
 .time{
   float: right;
@@ -120,7 +70,6 @@
   padding: 0;
   margin: 0;
 }
-
 
 .off{
   display: none;
@@ -137,11 +86,11 @@
   background-color: #db570c;
 }
 .twitter {
-  background-color: #6fb3fa;
+  background-color: #60b2f6;
 }
 
 .twitter:hover{
-  background-color: #558fcb;
+  background-color: #5194cb;
 }
 
 .outlook {
