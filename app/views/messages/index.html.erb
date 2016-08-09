@@ -24,7 +24,7 @@
 <%else%>
   <div class="msg-container">
     <% @messages.each { |msg| %>
-      <div class="message-item">
+      <div class="message-item on">
         <div class="info-top <%=msg.source%>">
           <%if msg.source == 'gmail'%>
             <i class= "fa fa-google-plus"></i>

@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require messages
 //= require jquery_ujs
 //= require_tree .
 

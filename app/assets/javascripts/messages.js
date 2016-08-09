@@ -1,13 +1,23 @@
+//=require_tree
 $(function(){
-  $('fa-google-plus').on('click', function(e){
+  $('.sidenav li a').on('click', function(e){
     e.preventDefault();
-    if ($('gmail-item').hasClass('on')){
-      $('gmail').removeClass('on');
-      $('gmail-item').fadeOut(200).addClass('off');
-    } else {
-      $('gmail-item').removeClass('off');
-      $('gmail-item').fadeIn(200).addClass('on')
-
+    var $this= $(this);
+    if ($this.hasClass('fa-google-plus')){
+      $('div').filter(document.getElementsByClassName('gmail')).parent().toggleClass('on off');
     }
-  })
+
+    if ($this.hasClass('fa-github')){
+      $('div').filter(document.getElementsByClassName('github')).parent().toggleClass('on off');
+    }
+
+    if ($this.hasClass('fa-twitter')){
+      $('div').filter(document.getElementsByClassName('twitter')).parent().toggleClass('on off');
+    }
+
+    if ($this.hasClass('fa-envelope')){
+      $('div').filter(document.getElementsByClassName('outlook')).parent().toggleClass('on off');
+    }
+
+  });
 });
