@@ -4,17 +4,16 @@
     <h3 class="title">Your Info</h3>
 
     <div class="avatar">
-      <%=image_tag("http://api.adorable.io/avatar/#{@user.email.split('@')[0]}", class:'avatar')%>
+      <%=image_tag("http://api.adorable.io/avatar/#{@user.name}", class:'avatar')%>
     </div>
     <p>
       <strong>Email:</strong>
       <%= @user.email %>
     </p>
     <div class="connection">
-      <p>Google: <%= link_to 'Connect', auth_at_provider_url('google') %>  | Disconnect</p>
-      <p>Git: <%= link_to 'Connect', auth_at_provider_url('github') %> | Disconnect</p>
-      <p>Twitter: <%= link_to 'Connect', auth_at_provider_url('twitter') %> | Disconnect</p>
-      <p>Outlook: <%= link_to 'Connect', auth_at_provider_url('outlook') %> | Disconnect</p>
+      <p>Google: <%= link_to 'Connect', auth_at_provider_url('google') %></p>
+      <p>Git: <%= link_to 'Connect', auth_at_provider_url('github') %></p>
+      <p>Twitter: <%= link_to 'Connect', auth_at_provider_url('twitter') %></p>
     </div>
 
 

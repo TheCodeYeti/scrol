@@ -4,7 +4,7 @@
 <div class="section group">
 
   <!-- Gmail Connect -->
-  <div class="span_1_of_4 col message-item">
+  <div class="span_1_of_3 col message-item">
     <div class="info-top gmail">
       <i class= "fa fa-google-plus"></i>
     </div>
@@ -16,7 +16,7 @@
   </div>
 
   <!-- Twitter Connect -->
-  <div class="span_1_of_4 col message-item">
+  <div class="span_1_of_3 col message-item">
 
     <div class="info-top twitter">
       <i class= "fa fa-twitter"></i>
@@ -28,7 +28,7 @@
     </div>
   </div>
   <!-- Github Connect -->
-  <div class="span_1_of_4 col message-item">
+  <div class="span_1_of_3 col message-item">
     <div class="info-top github">
       <i class="fa fa-github"></i>
     </div>
@@ -38,17 +38,6 @@
     </div>
   </div>
 
-  <!-- Outlook Connect -->
-  <div class="span_1_of_4 col message-item">
-
-    <div class="info-top outlook">
-      <i class="fa fa-envelope"></i>
-    </div>
-
-    <div class="message-article">
-      <h3>Connect to Outlook</h3>
-      <%= link_to 'Connect', auth_at_provider_url('outlook') %>
-    </div>
   </div>
 
 </div>
@@ -63,9 +52,6 @@
           <%if msg.source == 'gmail'%>
             <i class= "fa fa-google-plus"></i>
             <p>Gmail</p>
-          <%elsif msg.source == 'outlook'%>
-            <i class="fa fa-envelope"></i>
-            <p>Outlook</p>
           <%elsif msg.source == 'twitter'%>
             <i class="fa fa-twitter"></i>
             <p>Twitter</p>
