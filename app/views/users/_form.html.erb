@@ -15,7 +15,7 @@
 
     <div class="field">
       <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= email_field_tag :email, params[:email], autocomplete: 'off' %>
     </div>
     <div class="field">
       <%= f.label :password %>
