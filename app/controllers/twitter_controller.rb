@@ -8,6 +8,7 @@ class TwitterController < ApplicationController
     end
 
 
+
     # @tweets = client.search("raptors", result_type: "recent").take(7).collect do |tweet|
     #   " #{tweet.user.screen_name}:
     #   #{tweet.text}
@@ -15,6 +16,7 @@ class TwitterController < ApplicationController
     # end
 
     @tweets = client.home_timeline
+
   end
 
 end

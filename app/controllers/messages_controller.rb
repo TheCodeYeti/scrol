@@ -2,11 +2,25 @@ class MessagesController < ApplicationController
   require 'google/api_client'
 
   def index
-    @messages = current_user.messages
-    @messages.order(timestamp: :desc)
+    @messages = current_user.messages.order(timestamp: :desc)
+
+    respond_to do |format|
+
+      format.html { render :index }
+      format.json { render json: @messages }
+
+    end
   end
 
   def show
+    @message = Message.find(params[:id])
+
+    respond_to do |format|
+
+      format.html { render :show }
+      format.json { render json: @message }
+
+    end
 
   end
 

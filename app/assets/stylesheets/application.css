@@ -20,14 +20,19 @@
 /*@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");*/
 
 body{
+
   background-color: #f3f3f4;
+
 }
 a:hover {
   background-color: transparent;
+
+
 }
 
 .wrapper {
   margin: auto;
+
 }
 
 .main-content {
@@ -51,38 +56,40 @@ a:hover {
 /*  GRID OF FOUR   ============================================================================= */
 
 
+
 .span_4_of_4 {
-	width: 100%;
+  width: 100%;
 }
 
 .span_3_of_4 {
-	width: 74.6%;
+  width: 74.6%;
 }
 
 .span_2_of_4 {
-	width: 49.2%;
+  width: 49.2%;
 }
 
 .span_1_of_4 {
-	width: 23.8%;
+  width: 23.8%;
+
 }
 
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-	.span_4_of_4 {
-		width: 100%;
-	}
-	.span_3_of_4 {
-		width: 100%;
-	}
-	.span_2_of_4 {
-		width: 100%;
-	}
-	.span_1_of_4 {
-		width: 100%;
-	}
+  .span_4_of_4 {
+    width: 100%;
+  }
+  .span_3_of_4 {
+    width: 100%;
+  }
+  .span_2_of_4 {
+    width: 100%;
+  }
+  .span_1_of_4 {
+    width: 100%;
+  }
 }
 /*  NAVIGATION   =========================================================== */
 
@@ -243,9 +250,9 @@ a:hover {
   padding: 30px;
 }
 .section {
-	clear: both;
-	padding: 0;
-	margin: 0;
+  clear: both;
+  padding: 0;
+  margin: 0;
 }
 
 /*  GROUPING  ============================================================================= */
@@ -262,11 +269,13 @@ a:hover {
 /*  GRID COLUMN SETUP   ==================================================================== */
 
 .col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-  /*padding: 0 30px 10px 30px;*/
+
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+  /*padding: 0px 30px 10px 30px;*/
   border-radius: 1em;
+
 }
 
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
