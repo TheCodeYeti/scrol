@@ -110,6 +110,66 @@
   background-color: #046f49;
 }
 
+.gmail ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(244, 111, 37, 0.07);
+  border: 1px solid #f46f25;
+  color: #f46f25;
+}
+
+.gmail ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(244, 111, 37, 1);
+  color: #fff;
+}
+
+.twitter ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(96, 178, 246, 0.7);
+  border: 1px solid #6fb3fa;
+  color: #6fb3fa;
+}
+
+.twitter ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(96, 178, 246, 1);
+  color: #fff;
+}
+
+.outlook ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(122, 162, 193, 0.7);
+  border: 1px solid #7ba3c1;
+  color: #7ba3c1;
+}
+
+.outlook ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(88, 135, 172, 1);
+  color: #fff;
+}
+
+.github ~ .message-article a {
+  display: inline;
+  padding: 5px;
+  border-radius: 0.5em;
+  background-color: rgba(5, 131, 86, 0.7);
+  border: 1px solid #058356;
+  color: #058356;
+}
+
+.github ~ .message-article a:hover {
+  text-decoration: none;
+  background-color: rgba(5, 131, 86, 1);
+  color: #fff;
+}
+
 @media only screen and (min-width: 400px) {
   .msg-container {
     column-count: 1;
