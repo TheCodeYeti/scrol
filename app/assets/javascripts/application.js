@@ -17,15 +17,13 @@
 $(function() {
 
 
-    
+
       // This is an event handler to stop event propagation
       // To close window onclick on other parts besides the field
-
+      //
       // $('.signup_form_reload').on('click', function(){
       //   $('.signup-form').css('display', 'block')
       // })
-
-
 
 
       $('.sidenav').on('mouseover', function(){

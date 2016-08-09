@@ -2,17 +2,19 @@
  $(function(){
 
 
-   $('.refreshBtn').on('click', function(event){
+  var load = $(".refreshBtn").on('click', function(event){
      event.preventDefault()
 
          $.ajax({
-           url: 'messages/import/1',
+           url: 'messages',
            type: 'GET',
-           dataType: 'html',
-           data: { }
+           dataType: 'json',
+           data: {}
          })
          .done(function(data) {
-           console.log( 200, { "Content-Type": "text/html" }, data );
+
+               $('.container').append( data );
+
          })
          .fail(function() {
            console.log("error");
@@ -22,6 +24,9 @@
          });
 
    });
+
+
+
 
 
 

@@ -119,18 +119,16 @@ a{
 }
 
 .login-form {
-  position:absolute;
-  z-index: 12;
-  left: 45px;
+  position:relative;
   background: #2f4858;
   padding: 40px;
   max-width: 600px;
-  margin: 120px 200px auto;
+  margin: 40px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   list-style: none;
   box-sizing: border-box;
-  display: none;
+  display: block;
   overflow: hidden;
 
 }
