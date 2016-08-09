@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
     <!-- font-awesome provides social media symbols -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="css/stackicons.css" />
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
   </head>
   <body>
@@ -19,7 +19,7 @@
         <% if current_user %>
           <li>
           <!-- @spencer should current_user.id be current_user? -->
-          <%= link_to 'My Profile', users_path(@user), method: :get %>
+          <%= link_to 'My Profile', user_path(@user), method: :get %>
           </li>
           <li><%= link_to 'Messages', :messages, method: :get %></li>
           <li><%= link_to 'Logout', :logout, method: :post %></li>
@@ -48,10 +48,10 @@
     <div class= "nav-wrapper">
       <ul class= "sidenav">
         <li class="branding"><%= image_tag("#{ENV['ROOT_URL']}/assets/scrol.png", alt: "logo", class: "logo-nav") %></li>
-        <li title="user-icon"><a class="fa fa-user" aria-hidden="true" href="<%=users_path(current_user)%>">User</a></li>
+        <li title="user-icon"><a class="fa fa-user" aria-hidden="true" href="<%=user_path(current_user)%>">Profile</a></li>
         <li title="gmail-icon"><a class="fa fa-google-plus" aria-hidden="true" href="#">Gmail</a></li>
-        <li title="github-icon"><a class="fa fa-github" aria-hidden="true" href="github_results_git_path">Github</a></li>
-        <li title="twitter-icon"><a class="fa fa-twitter" aria-hidden="true" href="twitter_index_path">Twitter</a></li>
+        <li title="github-icon"><a class="fa fa-github" aria-hidden="true" href="#">Github</a></li>
+        <li title="twitter-icon"><a class="fa fa-twitter" aria-hidden="true" href="#">Twitter</a></li>
       </ul>
     </div>
     <%end%>
