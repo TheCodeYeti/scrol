@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'messages#index' 
+  root to: 'messages#index'
 
   get 'mail/index'
 
@@ -10,20 +10,21 @@ Rails.application.routes.draw do
   get 'results/:provider', to: 'oauth#results', as: 'oauth_results' #@spencer to look at
   # added by paul end
 
-  get 'twitter/index'
 
   resources :user_sessions #@spencer do we need this??
   resources :users
-  resources :messages
+  get 'messages', to: 'messages#index'
+  get 'messages/show'
 
   get 'messages/import/:user_id', to: 'messages#import', as: 'import_messages'
 
   get 'login' => 'user_sessions#new', as: :login
   post 'logout' => 'user_sessions#destroy', as: :logout
 
-  get 'github/redirect_git'
-  get 'github/callback_git'
-  get 'github/results_git'
+  # get 'twitter/index'
+  # get 'github/redirect_git'
+  # get 'github/callback_git'
+  # get 'github/results_git'
 
   get 'oauths/oauth'
   get 'oauths/callback'
