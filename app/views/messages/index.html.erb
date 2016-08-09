@@ -1,6 +1,9 @@
 <div class="container">
 <h1>Messages</h1>
 <!-- <#% binding.pry %> -->
+
+<%= link_to 'Refresh', messages_path, class: 'refreshBtn' %>
+
 <% if @messages.empty? == true%>
 <div class="section group">
   <div class="span_1_of_4 gmail-item col">

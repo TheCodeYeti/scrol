@@ -282,17 +282,12 @@ a:hover {
 /*  GRID COLUMN SETUP   ==================================================================== */
 
 .col {
-<<<<<<< HEAD
-  display: block;
-  float:left;
-  margin: 1% 0 1% 1.6%;
-=======
   display: block;
   float:left;
   margin: 1% 0 1% 1.6%;
   padding: 0px 30px 10px 30px;
   border-radius: 1em;
->>>>>>> 7c0533f766514a580c8804a4a5822cec5573e682
+
 }
 
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
