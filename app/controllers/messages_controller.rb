@@ -1,5 +1,12 @@
 class MessagesController < ApplicationController
+
+
   require 'google/api_client'
+
+  # gmail comes with an epoch that is consistent
+  # so it timestamp will use it instead of the header
+  # data -- Pablo
+  require 'date'
 
   def index
     @messages = current_user.messages.order(timestamp: :desc)
@@ -47,7 +54,10 @@ class MessagesController < ApplicationController
 
     end
 
+    @messages = current_user.messages.order(timestamp: :desc)
+
     render :index
+
   end
 
   private
@@ -67,11 +77,11 @@ class MessagesController < ApplicationController
     gmail_api = google_api_client.discovered_api('gmail', 'v1')
 
     results = google_api_client.execute!(
-      api_method: gmail_api.users.threads.list,
-      parameters: {userId: "me", is: "unread", includeSpamTrash: false}
+      api_method: gmail_api.users.messages.list,
+      parameters: {userId: "me", after: (DateTime.now.to_time.to_i-(86400*3)), includeSpamTrash: false}
     )
 
-    results.data.threads.each do |thread|
+    results.data.messages.each do |thread|
 
       # check if the thread has already been saved
       if not Message.exists?(message_id: thread.id)
@@ -83,7 +93,7 @@ class MessagesController < ApplicationController
               parameters: {userId: 'me', id: thread.id}
             )
 
-        # save it
+        # save it baby!!!!!!
         message = Message.new()
         message.snippet = msg.data.snippet
         message.url = "https://mail.google.com/mail/u/0/#" + msg.data.labelIds[0].downcase + "/" + msg.data.id
@@ -93,15 +103,21 @@ class MessagesController < ApplicationController
         message.message_id = msg.data.id
         message.user = user
 
+        # gmail comes with an epoch that is consistent
+        # so it timestamp will use it instead of the header
+        # data -- Pablo
+        message.timestamp = DateTime.strptime((msg.data.internalDate/1000).to_s,'%s')
+
         msg.data.payload.headers.each do |header|
 
-          if header.name == 'X-Received'
+          # removed and replaced with epoch above Pablo
+          # if header.name == 'X-Received'
+          #
+          #   message.timestamp = DateTime.parse(header.value[header.value.index(';')+1,(header.value.length -  header.value.index(';'))].strip)
 
-            message.timestamp = DateTime.parse(header.value[header.value.index(';')+1,(header.value.length -  header.value.index(';'))].strip)
+          if header.name == 'Subject'
 
-          elsif header.name == 'Subject'
-
-            message.title = header.value
+              message.title = header.value
 
           end
 
